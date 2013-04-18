@@ -1,6 +1,6 @@
 
 --RAZONSOCIAL
-INSERT INTO `razon_social` (`rut`, `nombre`) VALUES
+INSERT INTO 'razon_social' ('rut', 'nombre') VALUES
 ('16.923.239-3', 'Cobo S.A.'),
 ('20.387.176-4', 'ECONOMICO S.A.'),
 ('23.851.113-2', 'K S.A.'),
@@ -15,7 +15,7 @@ INSERT INTO `razon_social` (`rut`, `nombre`) VALUES
 
 
 --REGIONES
-INSERT INTO `regiones` (`id`, `nombre`) VALUES
+INSERT INTO 'regiones' ('id', 'nombre') VALUES
 (1, 'Tarapacá'),
 (2, 'Antofagasta'),
 (3, 'Atacama'),
@@ -33,7 +33,7 @@ INSERT INTO `regiones` (`id`, `nombre`) VALUES
 (15, 'Arica y Parinacota');
 
 --COMUNAS
-INSERT INTO `comunas` (`id`, `nombre`, `region_id`) VALUES
+INSERT INTO 'comunas' ('id', 'nombre', 'region_id') VALUES
 (30954, 'Estación Central', 13),
 (30958, 'La Granja', 13),
 (30972, 'Las Condes', 13),
@@ -170,7 +170,7 @@ INSERT INTO `comunas` (`id`, `nombre`, `region_id`) VALUES
 (33182, 'Ñuñoa', 13);
 
 --DIRECCIONES
-INSERT INTO `direcciones` (`shipto`, `rut`, `calle`, `numero`, `depto`, `otro`, `cliente_direccion_id`, `comuna_id`) VALUES
+INSERT INTO 'direcciones' ('shipto', 'rut', 'calle', 'numero', 'depto', 'otro', 'cliente_direccion_id', 'comuna_id') VALUES
 (70103224, '48.098.672-2', 'Av. Las Condes', 12207, NULL, NULL, 1012032221, 32440),
 (70103176, '27.315.050-5', 'Av. Concha y Toro', 1477, NULL, NULL, 101403178, 31535),
 (70103690, '30.778.987-9', 'Valdivia Bueras', 1400, NULL, NULL, 1014036932, 32044),
