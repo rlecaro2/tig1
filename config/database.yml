@@ -1,0 +1,50 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+# 
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql2
+  database: dev
+  username: root
+test:
+  adapter: mysql2
+  database: test
+  username: root
+production:
+  adapter: mysql2
+  database: prod
+  username: root
+
+integra1:
+  development:
+    adapter: mysql2
+    database: integra1_dev
+    username: root
+  test:
+    adapter: mysql2
+    database: integra1_test
+    username: root
+  production:
+    adapter: mysql2
+    database: integra1_prod
+    username: root
+
+dir:
+  development:
+    adapter: mysql2
+    database: dir_dev
+    username: root
+  test:
+    adapter: mysql2
+    database: dir_test
+    username: root
+  production:
+    adapter: mysql2
+    database: dir_prod
+    username: root
