@@ -1,0 +1,539 @@
+%YAML 1.1
+---
+# ODS_DB.comunas
+-
+  id: 30954
+  nombre: "Estación Central"
+  region_id: 13
+-
+  id: 30958
+  nombre: "La Granja"
+  region_id: 13
+-
+  id: 30972
+  nombre: "Las Condes"
+  region_id: 13
+-
+  id: 30984
+  nombre: "Maipú"
+  region_id: 13
+-
+  id: 30995
+  nombre: "Compañía"
+  region_id: 13
+-
+  id: 31027
+  nombre: "Las Rejas"
+  region_id: 13
+-
+  id: 31059
+  nombre: "San Diego"
+  region_id: 13
+-
+  id: 31061
+  nombre: "La Pintana"
+  region_id: 13
+-
+  id: 31067
+  nombre: "Franklin"
+  region_id: 13
+-
+  id: 31082
+  nombre: "La Granja"
+  region_id: 13
+-
+  id: 31091
+  nombre: "Vivaceta"
+  region_id: 13
+-
+  id: 31107
+  nombre: "Santiago"
+  region_id: 13
+-
+  id: 31140
+  nombre: "La Florida"
+  region_id: 13
+-
+  id: 31146
+  nombre: "Ñuñoa"
+  region_id: 13
+-
+  id: 31148
+  nombre: "La Reina"
+  region_id: 13
+-
+  id: 31152
+  nombre: "Cerro Navia"
+  region_id: 13
+-
+  id: 31168
+  nombre: "Puente Alto"
+  region_id: 13
+-
+  id: 31191
+  nombre: "Providencia"
+  region_id: 13
+-
+  id: 31198
+  nombre: "Recoleta"
+  region_id: 13
+-
+  id: 31209
+  nombre: "Pudahuel"
+  region_id: 13
+-
+  id: 31219
+  nombre: "Talca"
+  region_id: 7
+-
+  id: 31226
+  nombre: "Antofagasta"
+  region_id: 2
+-
+  id: 31259
+  nombre: "La Unión"
+  region_id: 14
+-
+  id: 31270
+  nombre: "Con Con"
+  region_id: 5
+-
+  id: 31303
+  nombre: "San Fernando"
+  region_id: 6
+-
+  id: 31324
+  nombre: "San Felipe"
+  region_id: 5
+-
+  id: 31341
+  nombre: "Osorno"
+  region_id: 10
+-
+  id: 31367
+  nombre: "Peñalolen"
+  region_id: 13
+-
+  id: 31383
+  nombre: "Antofagasta"
+  region_id: 2
+-
+  id: 31396
+  nombre: "Temuco"
+  region_id: 9
+-
+  id: 31422
+  nombre: "Valdivia"
+  region_id: 14
+-
+  id: 31444
+  nombre: "La Serena"
+  region_id: 4
+-
+  id: 31464
+  nombre: "Puerto Varas"
+  region_id: 10
+-
+  id: 31467
+  nombre: "Puerto Montt"
+  region_id: 10
+-
+  id: 31475
+  nombre: "Concepción"
+  region_id: 8
+-
+  id: 31492
+  nombre: "Arica"
+  region_id: 15
+-
+  id: 31501
+  nombre: "Los Angeles"
+  region_id: 8
+-
+  id: 31521
+  nombre: "Cerrillos"
+  region_id: 13
+-
+  id: 31535
+  nombre: "Puente Alto"
+  region_id: 13
+-
+  id: 31560
+  nombre: "Antofagasta"
+  region_id: 2
+-
+  id: 31585
+  nombre: "Conchalí"
+  region_id: 13
+-
+  id: 31606
+  nombre: "La Calera"
+  region_id: 5
+-
+  id: 31634
+  nombre: "Valparaiso"
+  region_id: 5
+-
+  id: 31655
+  nombre: "Peñalolén"
+  region_id: 13
+-
+  id: 31689
+  nombre: "Viña del Mar"
+  region_id: 5
+-
+  id: 31709
+  nombre: "La Florida"
+  region_id: 13
+-
+  id: 31727
+  nombre: "Cerrillos"
+  region_id: 13
+-
+  id: 31736
+  nombre: "Concepción"
+  region_id: 8
+-
+  id: 31760
+  nombre: "Puente Alto"
+  region_id: 13
+-
+  id: 31786
+  nombre: "La Serena"
+  region_id: 4
+-
+  id: 31803
+  nombre: "La Reina"
+  region_id: 13
+-
+  id: 31824
+  nombre: "Macul"
+  region_id: 13
+-
+  id: 31850
+  nombre: "Maipú"
+  region_id: 13
+-
+  id: 31881
+  nombre: "El Belloto"
+  region_id: 5
+-
+  id: 31886
+  nombre: "Quilicura"
+  region_id: 13
+-
+  id: 31893
+  nombre: "Maipú"
+  region_id: 13
+-
+  id: 31902
+  nombre: "Puerto Montt"
+  region_id: 10
+-
+  id: 31910
+  nombre: "Temuco"
+  region_id: 9
+-
+  id: 31933
+  nombre: "Vitacura"
+  region_id: 13
+-
+  id: 31954
+  nombre: "Calama"
+  region_id: 2
+-
+  id: 31975
+  nombre: "Punta Arenas"
+  region_id: 12
+-
+  id: 31981
+  nombre: "Rancagua"
+  region_id: 6
+-
+  id: 31987
+  nombre: "La Florida (Mall Plaza Vespucio)"
+  region_id: 13
+-
+  id: 31994
+  nombre: "San Miguel"
+  region_id: 13
+-
+  id: 32011
+  nombre: "Peñalolén"
+  region_id: 13
+-
+  id: 32044
+  nombre: "Valdivia"
+  region_id: 14
+-
+  id: 32050
+  nombre: "Viña de Mar"
+  region_id: 5
+-
+  id: 32053
+  nombre: "Chillán"
+  region_id: 8
+-
+  id: 32069
+  nombre: "Valparaiso"
+  region_id: 5
+-
+  id: 32088
+  nombre: "Coquimbo"
+  region_id: 4
+-
+  id: 32116
+  nombre: "Quillota"
+  region_id: 5
+-
+  id: 32148
+  nombre: "P.A Cerda"
+  region_id: 13
+-
+  id: 32179
+  nombre: "Providencia"
+  region_id: 13
+-
+  id: 32190
+  nombre: "La Florida"
+  region_id: 13
+-
+  id: 32202
+  nombre: "Curruma"
+  region_id: 5
+-
+  id: 32220
+  nombre: "La Reina"
+  region_id: 13
+-
+  id: 32253
+  nombre: "Lo Barnechea"
+  region_id: 13
+-
+  id: 32276
+  nombre: "Melipilla"
+  region_id: 13
+-
+  id: 32294
+  nombre: "Rancagua"
+  region_id: 6
+-
+  id: 32311
+  nombre: "Quinta Normal"
+  region_id: 13
+-
+  id: 32319
+  nombre: "Renca"
+  region_id: 13
+-
+  id: 32322
+  nombre: "Peñalolen"
+  region_id: 13
+-
+  id: 32334
+  nombre: "Vitacura"
+  region_id: 13
+-
+  id: 32342
+  nombre: "La Cisterna"
+  region_id: 13
+-
+  id: 32367
+  nombre: "Curico"
+  region_id: 7
+-
+  id: 32372
+  nombre: "Quilpue"
+  region_id: 5
+-
+  id: 32381
+  nombre: "Los Andes"
+  region_id: 5
+-
+  id: 32401
+  nombre: "Talcahuano"
+  region_id: 8
+-
+  id: 32403
+  nombre: "El Bosque"
+  region_id: 13
+-
+  id: 32413
+  nombre: "Iquique"
+  region_id: 1
+-
+  id: 32436
+  nombre: "La calera"
+  region_id: 5
+-
+  id: 32438
+  nombre: "Linares"
+  region_id: 7
+-
+  id: 32440
+  nombre: "Las Condes"
+  region_id: 13
+-
+  id: 32464
+  nombre: "Coronel"
+  region_id: 8
+-
+  id: 32495
+  nombre: "San Pedro"
+  region_id: 13
+-
+  id: 32500
+  nombre: "Huechuraba"
+  region_id: 13
+-
+  id: 32531
+  nombre: "Limache"
+  region_id: 5
+-
+  id: 32557
+  nombre: "Ovalle"
+  region_id: 4
+-
+  id: 32575
+  nombre: "Villa Alemana"
+  region_id: 5
+-
+  id: 32597
+  nombre: "Peñaflor"
+  region_id: 13
+-
+  id: 32610
+  nombre: "San Bdo"
+  region_id: 13
+-
+  id: 32614
+  nombre: "San Anto"
+  region_id: 5
+-
+  id: 32620
+  nombre: "Rengo"
+  region_id: 6
+-
+  id: 32652
+  nombre: "Talagante"
+  region_id: 13
+-
+  id: 32676
+  nombre: "El Monte"
+  region_id: 13
+-
+  id: 32700
+  nombre: "Buin"
+  region_id: 13
+-
+  id: 32719
+  nombre: "Viña del Mar"
+  region_id: 5
+-
+  id: 32746
+  nombre: "Curacaví"
+  region_id: 13
+-
+  id: 32766
+  nombre: "Santiago"
+  region_id: 13
+-
+  id: 32770
+  nombre: "Pichilemu"
+  region_id: 6
+-
+  id: 32790
+  nombre: "Las Condes"
+  region_id: 13
+-
+  id: 32811
+  nombre: "Valdivia"
+  region_id: 14
+-
+  id: 32828
+  nombre: "Maipú"
+  region_id: 13
+-
+  id: 32832
+  nombre: "Talcahuano"
+  region_id: 8
+-
+  id: 32839
+  nombre: "Curicó"
+  region_id: 7
+-
+  id: 32841
+  nombre: "Temuco"
+  region_id: 9
+-
+  id: 32875
+  nombre: "Vitacura"
+  region_id: 13
+-
+  id: 32882
+  nombre: "Loncoche"
+  region_id: 9
+-
+  id: 32894
+  nombre: "Concepción"
+  region_id: 8
+-
+  id: 32897
+  nombre: "Chillán"
+  region_id: 8
+-
+  id: 32929
+  nombre: "Quintero"
+  region_id: 5
+-
+  id: 32931
+  nombre: "Pitrufquén"
+  region_id: 9
+-
+  id: 32938
+  nombre: "Ñuñoa"
+  region_id: 13
+-
+  id: 32949
+  nombre: "San Miguel"
+  region_id: 13
+-
+  id: 32982
+  nombre: "La Cisterna"
+  region_id: 13
+-
+  id: 33012
+  nombre: "Conchalí"
+  region_id: 13
+-
+  id: 33021
+  nombre: "Peñalolen"
+  region_id: 13
+-
+  id: 33054
+  nombre: "La Reina"
+  region_id: 13
+-
+  id: 33069
+  nombre: "La Florida"
+  region_id: 13
+-
+  id: 33101
+  nombre: "Independencia"
+  region_id: 13
+-
+  id: 33119
+  nombre: "La Granja"
+  region_id: 13
+-
+  id: 33132
+  nombre: "Cerro Navia"
+  region_id: 13
+-
+  id: 33153
+  nombre: "Quilicura"
+  region_id: 13
+-
+  id: 33182
+  nombre: "Ñuñoa"
+  region_id: 13

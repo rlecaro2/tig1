@@ -1,0 +1,33 @@
+%YAML 1.1
+---
+# ODS_DB.razon_social
+-
+  rut: "16.923.239-3"
+  nombre: "Cobo S.A."
+-
+  rut: "20.387.176-4"
+  nombre: "ECONOMICO S.A."
+-
+  rut: "23.851.113-2"
+  nombre: "K S.A."
+-
+  rut: "27.315.050-5"
+  nombre: "MEGA S.A."
+-
+  rut: "30.778.987-9"
+  nombre: "MENDOZA S.A."
+-
+  rut: "34.242.924-1"
+  nombre: "Qal S.A."
+-
+  rut: "37.706.861-7"
+  nombre: "REG S.A."
+-
+  rut: "41.170.798-3"
+  nombre: "SAN AGUSTIN S.A."
+-
+  rut: "44.634.735-7"
+  nombre: "TRIO S.A."
+-
+  rut: "48.098.672-2"
+  nombre: "Valdivia S.A."

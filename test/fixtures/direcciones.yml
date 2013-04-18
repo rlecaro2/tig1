@@ -1,0 +1,1567 @@
+%YAML 1.1
+---
+# ODS_DB.locales
+-
+  shipto: 70103224
+  rut: "48.098.672-2"
+  calle: "Av. Las Condes"
+  numero: 12207
+  cliente_direccion_id: 1012032221
+  comuna_id: 32440
+-
+  shipto: 70103176
+  rut: "27.315.050-5"
+  calle: "Av. Concha y Toro"
+  numero: 1477
+  cliente_direccion_id: 101403178
+  comuna_id: 31535
+-
+  shipto: 70103690
+  rut: "30.778.987-9"
+  calle: "Valdivia Bueras"
+  numero: 1400
+  cliente_direccion_id: 1014036932
+  comuna_id: 32044
+-
+  shipto: 70103522
+  rut: "37.706.861-7"
+  calle: "Los Libertadores"
+  numero: 316
+  cliente_direccion_id: 1031035224
+  comuna_id: 32676
+-
+  shipto: 70103087
+  rut: "44.634.735-7"
+  calle: "Apoquindo"
+  numero: 4335
+  cliente_direccion_id: 1043030819
+  comuna_id: 32790
+-
+  shipto: 70103232
+  rut: "48.098.672-2"
+  calle: "Av. Manuel Matta"
+  numero: 437
+  cliente_direccion_id: 104303239
+  comuna_id: 33153
+-
+  shipto: 70103247
+  rut: "30.778.987-9"
+  calle: "Av. Pajaritos"
+  numero: 4499
+  cliente_direccion_id: 1044032410
+  comuna_id: 31850
+-
+  shipto: 70103468
+  rut: "30.778.987-9"
+  calle: "Gran Av. José Miguel Carrera"
+  numero: 6150
+  cliente_direccion_id: 1061034610
+  comuna_id: 31994
+-
+  shipto: 70103341
+  rut: "34.242.924-1"
+  calle: "Camilo Henríquez"
+  numero: 627
+  cliente_direccion_id: 1062033424
+  comuna_id: 32367
+-
+  shipto: 70103557
+  rut: "27.315.050-5"
+  calle: "Nataniel Cox"
+  numero: 620
+  cliente_direccion_id: 1062035529
+  comuna_id: 31107
+-
+  shipto: 70103054
+  rut: "37.706.861-7"
+  calle: "Alcalde Luis Araya Cereceda"
+  numero: 1047
+  otro: "Mall"
+  cliente_direccion_id: 1110030532
+  comuna_id: 32597
+-
+  shipto: 70103214
+  rut: "48.098.672-2"
+  calle: "Av. La Florida"
+  numero: 10149
+  depto: 35
+  cliente_direccion_id: 1110032112
+  comuna_id: 32190
+-
+  shipto: 70103509
+  rut: "34.242.924-1"
+  calle: "Joaquín Edwards Bello"
+  numero: 10670
+  cliente_direccion_id: 111003506
+  comuna_id: 31082
+-
+  shipto: 70103409
+  rut: "34.242.924-1"
+  calle: "Dr. Salinas"
+  numero: 1101
+  cliente_direccion_id: 111103404
+  comuna_id: 32294
+-
+  shipto: 70103687
+  rut: "34.242.924-1"
+  calle: "V. Mackenna"
+  numero: 160
+  cliente_direccion_id: 1116036826
+  comuna_id: 32557
+-
+  shipto: 70103126
+  rut: "34.242.924-1"
+  calle: "Av Walker Martínez"
+  numero: 1786
+  cliente_direccion_id: 1117031225
+  comuna_id: 32190
+-
+  shipto: 70103382
+  rut: "34.242.924-1"
+  calle: "Colón"
+  numero: 196
+  cliente_direccion_id: 1119033832
+  comuna_id: 32401
+-
+  shipto: 70103111
+  rut: "34.242.924-1"
+  calle: "Av Calos Valdovinos"
+  numero: 2020
+  cliente_direccion_id: 112003112
+  comuna_id: 32148
+-
+  shipto: 70103628
+  rut: "20.387.176-4"
+  calle: "San Diego"
+  numero: 219
+  cliente_direccion_id: 112103627
+  comuna_id: 31107
+-
+  shipto: 70103545
+  rut: "34.242.924-1"
+  calle: "Manuel Montt"
+  numero: 221
+  cliente_direccion_id: 1122035430
+  comuna_id: 32464
+-
+  shipto: 70103158
+  rut: "34.242.924-1"
+  calle: "Av. Cardenal Samoré"
+  numero: 2335
+  cliente_direccion_id: 1123031532
+  comuna_id: 32202
+-
+  shipto: 70103683
+  rut: "34.242.924-1"
+  calle: "Uruguay"
+  numero: 350
+  cliente_direccion_id: 1135036824
+  comuna_id: 32069
+-
+  shipto: 70103075
+  rut: "30.778.987-9"
+  calle: "Americo Vespucio"
+  numero: 4100
+  cliente_direccion_id: 1141030712
+  comuna_id: 31655
+-
+  shipto: 70103139
+  rut: "30.778.987-9"
+  calle: "Av. A. Vespucio Sur"
+  numero: 6325
+  cliente_direccion_id: 1163031331
+  comuna_id: 31709
+-
+  shipto: 70103347
+  rut: "34.242.924-1"
+  calle: "Carrera"
+  numero: 811
+  cliente_direccion_id: 1181033413
+  comuna_id: 32372
+-
+  shipto: 70103480
+  rut: "34.242.924-1"
+  calle: "Gran Avenida"
+  numero: 9863
+  depto: 34
+  cliente_direccion_id: 1198034828
+  comuna_id: 32403
+-
+  shipto: 70103568
+  rut: "34.242.924-1"
+  calle: "P. de Valdivia"
+  numero: 1066
+  cliente_direccion_id: 121003562
+  comuna_id: 31475
+-
+  shipto: 70103181
+  rut: "34.242.924-1"
+  calle: "Av. Dorsal"
+  numero: 1201
+  cliente_direccion_id: 1212031832
+  comuna_id: 31585
+-
+  shipto: 70103116
+  rut: "34.242.924-1"
+  calle: "Av Francisco Bilbao"
+  numero: 2855
+  cliente_direccion_id: 122803115
+  comuna_id: 32179
+-
+  shipto: 70103040
+  rut: "34.242.924-1"
+  calle: "21 de Mayo"
+  numero: 3225
+  cliente_direccion_id: 1232030429
+  comuna_id: 31475
+-
+  shipto: 70103617
+  rut: "34.242.924-1"
+  calle: "República de Chil"
+  numero: 391
+  cliente_direccion_id: 1239036123
+  comuna_id: 32294
+-
+  shipto: 70103084
+  rut: "34.242.924-1"
+  calle: "Antonio Varas"
+  numero: 711
+  cliente_direccion_id: 1271030811
+  comuna_id: 31467
+-
+  shipto: 70103146
+  rut: "48.098.672-2"
+  calle: "Av. Apoquindo"
+  numero: 7200
+  cliente_direccion_id: 1272031429
+  comuna_id: 32440
+-
+  shipto: 70103206
+  rut: "48.098.672-2"
+  calle: "Av. José Joaquín Pérez"
+  numero: 7259
+  cliente_direccion_id: 127203203
+  comuna_id: 33132
+-
+  shipto: 70103293
+  rut: "34.242.924-1"
+  calle: "Av. Valparaiso"
+  numero: 740
+  otro: "Mall"
+  cliente_direccion_id: 1274032920
+  comuna_id: 32050
+-
+  shipto: 70103412
+  rut: "30.778.987-9"
+  calle: "Edo. Frei Montalva"
+  numero: 1110
+  cliente_direccion_id: 1311034129
+  comuna_id: 31975
+-
+  shipto: 70103195
+  rut: "44.634.735-7"
+  calle: "Av. Francisco Salazar"
+  numero: 1650
+  cliente_direccion_id: 1316031916
+  comuna_id: 32841
+-
+  shipto: 70103639
+  rut: "20.387.176-4"
+  calle: "San Pablo"
+  numero: 2902
+  cliente_direccion_id: 132903632
+  comuna_id: 31107
+-
+  shipto: 70103467
+  rut: "44.634.735-7"
+  calle: "Gral. José Artigas"
+  numero: 3250
+  cliente_direccion_id: 133203466
+  comuna_id: 32938
+-
+  shipto: 70103285
+  rut: "37.706.861-7"
+  calle: "Av. Serrano"
+  numero: 395
+  cliente_direccion_id: 133903283
+  comuna_id: 32276
+-
+  shipto: 70103307
+  rut: "30.778.987-9"
+  calle: "Avenida Parque Industrial"
+  numero: 400
+  cliente_direccion_id: 1340033025
+  comuna_id: 31902
+-
+  shipto: 70103082
+  rut: "44.634.735-7"
+  calle: "Anibal Pinto"
+  numero: 540
+  cliente_direccion_id: 135403084
+  comuna_id: 32770
+-
+  shipto: 70103587
+  rut: "44.634.735-7"
+  calle: "Portugal"
+  numero: 56
+  cliente_direccion_id: 1356035831
+  comuna_id: 32766
+-
+  shipto: 70103439
+  rut: "37.706.861-7"
+  calle: "Eyzaguirre"
+  numero: 715
+  cliente_direccion_id: 1371034330
+  comuna_id: 32652
+-
+  shipto: 70103657
+  rut: "44.634.735-7"
+  calle: "Santa Rosa"
+  numero: 8002
+  cliente_direccion_id: 138003658
+  comuna_id: 33119
+-
+  shipto: 70103199
+  rut: "48.098.672-2"
+  calle: "Av. Ismael Valdés"
+  numero: 838
+  cliente_direccion_id: 1383031927
+  comuna_id: 31107
+-
+  shipto: 70103647
+  rut: "20.387.176-4"
+  calle: "Santa Isabel"
+  numero: 865
+  cliente_direccion_id: 138603645
+  comuna_id: 31191
+-
+  shipto: 70103662
+  rut: "20.387.176-4"
+  calle: "Tobalaba"
+  numero: 1177
+  cliente_direccion_id: 141103661
+  comuna_id: 31191
+-
+  shipto: 70103700
+  rut: "34.242.924-1"
+  calle: "Vicuña Mackenna"
+  numero: 1145
+  cliente_direccion_id: 141103707
+  comuna_id: 32190
+-
+  shipto: 70103658
+  rut: "44.634.735-7"
+  calle: "Serafin Zamora"
+  numero: 127
+  cliente_direccion_id: 1412036510
+  comuna_id: 33069
+-
+  shipto: 70103071
+  rut: "27.315.050-5"
+  calle: "Américo Vesp."
+  numero: 1501
+  cliente_direccion_id: 1415030719
+  comuna_id: 31521
+-
+  shipto: 70103079
+  rut: "34.242.924-1"
+  calle: "Anibal Pinto"
+  numero: 1551
+  cliente_direccion_id: 1415030725
+  comuna_id: 32088
+-
+  shipto: 70103462
+  rut: "20.387.176-4"
+  calle: "Grajales"
+  numero: 2146
+  cliente_direccion_id: 1421034617
+  comuna_id: 31107
+-
+  shipto: 70103726
+  rut: "34.242.924-1"
+  calle: "Zenteno"
+  numero: 232
+  cliente_direccion_id: 1423037234
+  comuna_id: 32436
+-
+  shipto: 70103572
+  rut: "23.851.113-2"
+  calle: "Pantaleón Cortes"
+  numero: 850
+  cliente_direccion_id: 1485035731
+  comuna_id: 31226
+-
+  shipto: 70103518
+  rut: "44.634.735-7"
+  calle: "Las Parcelas"
+  numero: 9001
+  otro: "Mall"
+  cliente_direccion_id: 1490035126
+  comuna_id: 33021
+-
+  shipto: 70103713
+  rut: "16.923.239-3"
+  calle: "Vivaceta"
+  numero: 957
+  cliente_direccion_id: 1495037124
+  comuna_id: 31091
+-
+  shipto: 70103543
+  rut: "44.634.735-7"
+  calle: "Manuel Montt"
+  numero: 1079
+  cliente_direccion_id: 151003546
+  comuna_id: 31191
+-
+  shipto: 70103266
+  rut: "30.778.987-9"
+  calle: "Av. Ramón Freire"
+  numero: 1351
+  cliente_direccion_id: 1513032633
+  comuna_id: 31881
+-
+  shipto: 70103152
+  rut: "34.242.924-1"
+  calle: "Av. Brasil"
+  numero: 1479
+  cliente_direccion_id: 1514031522
+  comuna_id: 32069
+-
+  shipto: 70103424
+  rut: "20.387.176-4"
+  calle: "El Olimpo"
+  numero: 1990
+  cliente_direccion_id: 1519034233
+  comuna_id: 30984
+-
+  shipto: 70103035
+  rut: "23.851.113-2"
+  calle: "14 de Febrero"
+  numero: 2455
+  cliente_direccion_id: 1524030310
+  comuna_id: 31226
+-
+  shipto: 70103299
+  rut: "34.242.924-1"
+  calle: "Avda. Ossa"
+  numero: 36
+  cliente_direccion_id: 1536032929
+  comuna_id: 32342
+-
+  shipto: 70103399
+  rut: "23.851.113-2"
+  calle: "Del Salvador"
+  numero: 451
+  cliente_direccion_id: 1545033916
+  comuna_id: 31464
+-
+  shipto: 70103538
+  rut: "34.242.924-1"
+  calle: "Manquehue Norte"
+  numero: 457
+  cliente_direccion_id: 1545035329
+  comuna_id: 32440
+-
+  shipto: 70103197
+  rut: "23.851.113-2"
+  calle: "Av. Grecia"
+  numero: 5791
+  cliente_direccion_id: 155703193
+  comuna_id: 31367
+-
+  shipto: 70103426
+  rut: "34.242.924-1"
+  calle: "El Roble"
+  numero: 770
+  cliente_direccion_id: 1577034212
+  comuna_id: 32053
+-
+  shipto: 70103101
+  rut: "23.851.113-2"
+  calle: "Augusto Grob"
+  numero: 1080
+  cliente_direccion_id: 161003106
+  comuna_id: 31259
+-
+  shipto: 70103553
+  rut: "34.242.924-1"
+  calle: "Michimalongo"
+  numero: 1040
+  cliente_direccion_id: 1610035518
+  comuna_id: 32495
+-
+  shipto: 70103204
+  rut: "30.778.987-9"
+  calle: "Av. Jorge Alessandri"
+  numero: 1131
+  cliente_direccion_id: 1611032027
+  comuna_id: 31803
+-
+  shipto: 70103417
+  rut: "30.778.987-9"
+  calle: "Eduardo Frie"
+  numero: 190
+  cliente_direccion_id: 1619034131
+  comuna_id: 31981
+-
+  shipto: 70103651
+  rut: "16.923.239-3"
+  calle: "Santa Rosa"
+  numero: 2055
+  cliente_direccion_id: 1620036534
+  comuna_id: 31067
+-
+  shipto: 70103053
+  rut: "16.923.239-3"
+  calle: "Alameda"
+  numero: 3390
+  cliente_direccion_id: 1633030532
+  comuna_id: 30954
+-
+  shipto: 70103352
+  rut: "34.242.924-1"
+  calle: "Cerro Tronador"
+  numero: 4981
+  cliente_direccion_id: 164903359
+  comuna_id: 31467
+-
+  shipto: 70103703
+  rut: "23.851.113-2"
+  calle: "Villagran"
+  numero: 558
+  cliente_direccion_id: 1655037034
+  comuna_id: 31501
+-
+  shipto: 70103510
+  rut: "20.387.176-4"
+  calle: "Jose Arrieta"
+  numero: 6282
+  cliente_direccion_id: 1662035131
+  comuna_id: 31148
+-
+  shipto: 70103457
+  rut: "44.634.735-7"
+  calle: "Gerónimo de Alderete"
+  numero: 697
+  cliente_direccion_id: 1669034532
+  comuna_id: 32841
+-
+  shipto: 70103453
+  rut: "30.778.987-9"
+  calle: "Froilán Roa"
+  numero: 7107
+  depto: 87
+  cliente_direccion_id: 1671034531
+  comuna_id: 31987
+-
+  shipto: 70103032
+  rut: "34.242.924-1"
+  calle: "1 Poniente"
+  numero: 811
+  cliente_direccion_id: 168103039
+  comuna_id: 32050
+-
+  shipto: 70103589
+  rut: "34.242.924-1"
+  calle: "Prat"
+  numero: 95
+  cliente_direccion_id: 1695035813
+  comuna_id: 32116
+-
+  shipto: 70103564
+  rut: "23.851.113-2"
+  calle: "P. Aguirre Cerda"
+  numero: 1010
+  cliente_direccion_id: 1710035631
+  comuna_id: 31492
+-
+  shipto: 70103156
+  rut: "34.242.924-1"
+  calle: "Av. Cardenal Caro"
+  numero: 1771
+  cliente_direccion_id: 1717031512
+  comuna_id: 31585
+-
+  shipto: 70103384
+  rut: "16.923.239-3"
+  calle: "Compañía"
+  numero: 2305
+  otro: "Mall"
+  cliente_direccion_id: 1723033817
+  comuna_id: 30995
+-
+  shipto: 70103096
+  rut: "44.634.735-7"
+  calle: "Arturo Prat"
+  numero: 54
+  cliente_direccion_id: 175403092
+  comuna_id: 32811
+-
+  shipto: 70103378
+  rut: "20.387.176-4"
+  calle: "Colombia"
+  numero: 7111
+  cliente_direccion_id: 1771033718
+  comuna_id: 31140
+-
+  shipto: 70103046
+  rut: "34.242.924-1"
+  calle: "5 de Abril"
+  numero: 864
+  cliente_direccion_id: 178603046
+  comuna_id: 32053
+-
+  shipto: 70103167
+  rut: "30.778.987-9"
+  calle: "Av. Concepción"
+  numero: 9000
+  cliente_direccion_id: 179003167
+  comuna_id: 31736
+-
+  shipto: 70103218
+  rut: "48.098.672-2"
+  calle: "Av. La Florida"
+  numero: 9385
+  otro: "Mall"
+  cliente_direccion_id: 1793032121
+  comuna_id: 32190
+-
+  shipto: 70103068
+  rut: "44.634.735-7"
+  calle: "Ambrosio O'Higgins"
+  numero: 1689
+  cliente_direccion_id: 1816030612
+  comuna_id: 32746
+-
+  shipto: 70103144
+  rut: "30.778.987-9"
+  calle: "Av. Americo Vespucio"
+  numero: 2500
+  otro: "Mall"
+  cliente_direccion_id: 1825031417
+  comuna_id: 31727
+-
+  shipto: 70103332
+  rut: "34.242.924-1"
+  calle: "Bulnes"
+  numero: 279
+  cliente_direccion_id: 1827033319
+  comuna_id: 31396
+-
+  shipto: 70103716
+  rut: "34.242.924-1"
+  calle: "Yumbel"
+  numero: 348
+  cliente_direccion_id: 1834037119
+  comuna_id: 32438
+-
+  shipto: 70103624
+  rut: "44.634.735-7"
+  calle: "Salomón Sack"
+  numero: 351
+  cliente_direccion_id: 1835036218
+  comuna_id: 33101
+-
+  shipto: 70103678
+  rut: "34.242.924-1"
+  calle: "Urmeneta"
+  numero: 430
+  cliente_direccion_id: 184303671
+  comuna_id: 32531
+-
+  shipto: 70103344
+  rut: "23.851.113-2"
+  calle: "Carrera"
+  numero: 499
+  cliente_direccion_id: 1849033426
+  comuna_id: 31396
+-
+  shipto: 70103083
+  rut: "34.242.924-1"
+  calle: "Anibal Pinto"
+  numero: 542
+  otro: "Mall"
+  cliente_direccion_id: 1854030827
+  comuna_id: 31475
+-
+  shipto: 70103654
+  rut: "16.923.239-3"
+  calle: "Santa Rosa"
+  numero: 7668
+  cliente_direccion_id: 187603659
+  comuna_id: 31082
+-
+  shipto: 70103164
+  rut: "44.634.735-7"
+  calle: "Av. Colón"
+  numero: 7948
+  otro: "Mall"
+  cliente_direccion_id: 187903166
+  comuna_id: 32832
+-
+  shipto: 70103175
+  rut: "34.242.924-1"
+  calle: "Av. Concha y Toro"
+  numero: 1036
+  cliente_direccion_id: 1910031729
+  comuna_id: 31535
+-
+  shipto: 70103435
+  rut: "37.706.861-7"
+  calle: "Eyzaguirre"
+  numero: 105
+  cliente_direccion_id: 1910034327
+  comuna_id: 31535
+-
+  shipto: 70103504
+  rut: "34.242.924-1"
+  calle: "J:J Perez"
+  numero: 102
+  cliente_direccion_id: 1910035032
+  comuna_id: 32436
+-
+  shipto: 70103649
+  rut: "16.923.239-3"
+  calle: "Santa Rosa"
+  numero: 1305
+  cliente_direccion_id: 1913036418
+  comuna_id: 31061
+-
+  shipto: 70103237
+  rut: "44.634.735-7"
+  calle: "Av. Miguel Ramirez"
+  numero: 1420
+  cliente_direccion_id: 1914032321
+  comuna_id: 31981
+-
+  shipto: 70103210
+  rut: "30.778.987-9"
+  calle: "Av. José Pedro Alessandri"
+  numero: 2127
+  cliente_direccion_id: 1921032110
+  comuna_id: 31824
+-
+  shipto: 70103521
+  rut: "34.242.924-1"
+  calle: "Local Villanelo"
+  numero: 236
+  cliente_direccion_id: 1923035229
+  comuna_id: 32050
+-
+  shipto: 70103490
+  rut: "34.242.924-1"
+  calle: "Heroes de la Concepción"
+  numero: 2855
+  cliente_direccion_id: 1928034916
+  comuna_id: 32413
+-
+  shipto: 70103059
+  rut: "16.923.239-3"
+  calle: "Almirante La torre"
+  numero: 310
+  cliente_direccion_id: 1931030528
+  comuna_id: 30958
+-
+  shipto: 70103309
+  rut: "30.778.987-9"
+  calle: "Avenida Prieto Norte"
+  numero: 320
+  cliente_direccion_id: 1932033033
+  comuna_id: 31910
+-
+  shipto: 70103114
+  rut: "23.851.113-2"
+  calle: "Av Con Cón Reñaca"
+  numero: 385
+  cliente_direccion_id: 1938031125
+  comuna_id: 31270
+-
+  shipto: 70103499
+  rut: "44.634.735-7"
+  calle: "Irarrazabal"
+  numero: 4354
+  cliente_direccion_id: 194303493
+  comuna_id: 32938
+-
+  shipto: 70103448
+  rut: "23.851.113-2"
+  calle: "Freire"
+  numero: 455
+  cliente_direccion_id: 1945034433
+  comuna_id: 31475
+-
+  shipto: 70103391
+  rut: "20.387.176-4"
+  calle: "Curicó"
+  numero: 517
+  cliente_direccion_id: 1951033921
+  comuna_id: 31107
+-
+  shipto: 70103310
+  rut: "37.706.861-7"
+  calle: "B. O'Higgins"
+  numero: 528
+  cliente_direccion_id: 1952033126
+  comuna_id: 32610
+-
+  shipto: 70103591
+  rut: "30.778.987-9"
+  calle: "Presidente Kennedy"
+  numero: 5377
+  cliente_direccion_id: 1953035928
+  comuna_id: 32011
+-
+  shipto: 70103090
+  rut: "16.923.239-3"
+  calle: "Apoquindo"
+  numero: 8450
+  cliente_direccion_id: 198403097
+  comuna_id: 30972
+-
+  shipto: 70103708
+  rut: "44.634.735-7"
+  calle: "Vitacura"
+  numero: 8400
+  cliente_direccion_id: 1984037019
+  comuna_id: 32875
+-
+  shipto: 70103632
+  rut: "20.387.176-4"
+  calle: "San Francisco"
+  numero: 8520
+  otro: "Mall"
+  cliente_direccion_id: 1985036312
+  comuna_id: 31209
+-
+  shipto: 70103091
+  rut: "34.242.924-1"
+  calle: "Arlegui"
+  numero: 948
+  cliente_direccion_id: 1994030922
+  comuna_id: 32050
+-
+  shipto: 70103407
+  rut: "23.851.113-2"
+  calle: "Diego Portales"
+  numero: 1040
+  cliente_direccion_id: 2010034030
+  comuna_id: 31467
+-
+  shipto: 70103130
+  rut: "23.851.113-2"
+  calle: "Av. Yungay"
+  numero: 1150
+  cliente_direccion_id: 201103138
+  comuna_id: 31324
+-
+  shipto: 70103562
+  rut: "20.387.176-4"
+  calle: "Ossandón"
+  numero: 1220
+  cliente_direccion_id: 2012035614
+  comuna_id: 31148
+-
+  shipto: 70103609
+  rut: "44.634.735-7"
+  calle: "Ramón Freire"
+  numero: 1529
+  cliente_direccion_id: 2015036032
+  comuna_id: 32828
+-
+  shipto: 70103077
+  rut: "44.634.735-7"
+  calle: "Amunategui"
+  numero: 178
+  cliente_direccion_id: 2017030713
+  comuna_id: 32766
+-
+  shipto: 70103622
+  rut: "44.634.735-7"
+  calle: "Rojas Magallanes"
+  numero: 1856
+  cliente_direccion_id: 2018036218
+  comuna_id: 33069
+-
+  shipto: 70103231
+  rut: "34.242.924-1"
+  calle: "Av. Manso"
+  numero: 533
+  cliente_direccion_id: 2053032319
+  comuna_id: 32276
+-
+  shipto: 70103020
+  rut: "30.778.987-9"
+  calle: "General Velásquez"
+  numero: 60
+  cliente_direccion_id: 2060030225
+  comuna_id: 31634
+-
+  shipto: 70103323
+  rut: "23.851.113-2"
+  calle: "Baquedano"
+  numero: 750
+  cliente_direccion_id: 207503328
+  comuna_id: 31383
+-
+  shipto: 70103324
+  rut: "44.634.735-7"
+  calle: "Barros Arana"
+  numero: 776
+  cliente_direccion_id: 2077033212
+  comuna_id: 32882
+-
+  shipto: 70103580
+  rut: "34.242.924-1"
+  calle: "Pedro Fontova"
+  numero: 7789
+  cliente_direccion_id: 2077035816
+  comuna_id: 32500
+-
+  shipto: 70103395
+  rut: "34.242.924-1"
+  calle: "D. Portales"
+  numero: 802
+  cliente_direccion_id: 208003395
+  comuna_id: 32372
+-
+  shipto: 70103132
+  rut: "30.778.987-9"
+  calle: "Av. 15 Norte"
+  numero: 961
+  cliente_direccion_id: 209603136
+  comuna_id: 31689
+-
+  shipto: 70103619
+  rut: "23.851.113-2"
+  calle: "Rodriguez"
+  numero: 1190
+  cliente_direccion_id: 2111036122
+  comuna_id: 31396
+-
+  shipto: 70103242
+  rut: "34.242.924-1"
+  calle: "Av. Pablo Neruda"
+  numero: 2050
+  cliente_direccion_id: 2120032411
+  comuna_id: 31396
+-
+  shipto: 70103721
+  rut: "30.778.987-9"
+  calle: "Zenteno"
+  numero: 21
+  cliente_direccion_id: 2121037212
+  comuna_id: 31226
+-
+  shipto: 70103612
+  rut: "20.387.176-4"
+  calle: "Recoleta"
+  numero: 2302
+  cliente_direccion_id: 2123036130
+  comuna_id: 31198
+-
+  shipto: 70103334
+  rut: "30.778.987-9"
+  calle: "Balmaceda "
+  numero: 3242
+  cliente_direccion_id: 2132033319
+  comuna_id: 31954
+-
+  shipto: 70103485
+  rut: "44.634.735-7"
+  calle: "Grecia"
+  numero: 320
+  cliente_direccion_id: 2132034813
+  comuna_id: 32938
+-
+  shipto: 70103250
+  rut: "16.923.239-3"
+  calle: "Av. Pajaritos"
+  numero: 4909
+  cliente_direccion_id: 2149032529
+  comuna_id: 30984
+-
+  shipto: 70103104
+  rut: "34.242.924-1"
+  calle: "Av . San Martín"
+  numero: 147
+  cliente_direccion_id: 2214031014
+  comuna_id: 32116
+-
+  shipto: 70103143
+  rut: "44.634.735-7"
+  calle: "Av. Alfredo Silva"
+  numero: 1414
+  cliente_direccion_id: 2214031430
+  comuna_id: 32828
+-
+  shipto: 70103337
+  rut: "41.170.798-3"
+  calle: "Caletera Los Aromos"
+  numero: 441
+  cliente_direccion_id: 224403334
+  comuna_id: 32652
+-
+  shipto: 70103606
+  rut: "34.242.924-1"
+  calle: "Quillota"
+  numero: 441
+  cliente_direccion_id: 224403601
+  comuna_id: 32050
+-
+  shipto: 70103574
+  rut: "20.387.176-4"
+  calle: "Pedro de Valdivia"
+  numero: 5359
+  cliente_direccion_id: 2253035731
+  comuna_id: 31146
+-
+  shipto: 70103295
+  rut: "34.242.924-1"
+  calle: "Av. Vitacura"
+  numero: 6255
+  cliente_direccion_id: 2262032914
+  comuna_id: 32334
+-
+  shipto: 70103282
+  rut: "44.634.735-7"
+  calle: "Av. Santa María"
+  numero: 6940
+  cliente_direccion_id: 2269032822
+  comuna_id: 32875
+-
+  shipto: 70103526
+  rut: "34.242.924-1"
+  calle: "Los Pensamientos"
+  numero: 10260
+  cliente_direccion_id: 2310035228
+  comuna_id: 31082
+-
+  shipto: 70103403
+  rut: "34.242.924-1"
+  calle: "Diagonal P. Aguirre Cerda"
+  numero: 1107
+  cliente_direccion_id: 2311034030
+  comuna_id: 31475
+-
+  shipto: 70103508
+  rut: "34.242.924-1"
+  calle: "Januario Espinoza"
+  numero: 1183
+  cliente_direccion_id: 2311035021
+  comuna_id: 32438
+-
+  shipto: 70103432
+  rut: "44.634.735-7"
+  calle: "Estrella de Chile"
+  numero: 169
+  cliente_direccion_id: 2316034324
+  comuna_id: 32929
+-
+  shipto: 70103447
+  rut: "34.242.924-1"
+  calle: "Freire"
+  numero: 2411
+  cliente_direccion_id: 2324034418
+  comuna_id: 32372
+-
+  shipto: 70103442
+  rut: "44.634.735-7"
+  calle: "Fco. Bilbao"
+  numero: 338
+  cliente_direccion_id: 233303447
+  comuna_id: 32931
+-
+  shipto: 70103419
+  rut: "44.634.735-7"
+  calle: "Eduardo Marquina"
+  numero: 3992
+  cliente_direccion_id: 233903413
+  comuna_id: 32875
+-
+  shipto: 70103450
+  rut: "34.242.924-1"
+  calle: "Freire"
+  numero: 496
+  cliente_direccion_id: 234903459
+  comuna_id: 32372
+-
+  shipto: 70103254
+  rut: "48.098.672-2"
+  calle: "Av. Parque Central Pon."
+  numero: 1040
+  cliente_direccion_id: 31003258
+  comuna_id: 30984
+-
+  shipto: 70103386
+  rut: "37.706.861-7"
+  calle: "Condell"
+  numero: 100
+  cliente_direccion_id: 310033833
+  comuna_id: 32620
+-
+  shipto: 70103093
+  rut: "37.706.861-7"
+  calle: "Arturo Prat"
+  numero: 117
+  cliente_direccion_id: 31103093
+  comuna_id: 32610
+-
+  shipto: 70103584
+  rut: "34.242.924-1"
+  calle: "Portugal"
+  numero: 112
+  cliente_direccion_id: 311035832
+  comuna_id: 31107
+-
+  shipto: 70103600
+  rut: "20.387.176-4"
+  calle: "Providencia"
+  numero: 1634
+  cliente_direccion_id: 316036021
+  comuna_id: 31191
+-
+  shipto: 70103629
+  rut: "16.923.239-3"
+  calle: "San Diego"
+  numero: 235
+  cliente_direccion_id: 323036228
+  comuna_id: 31059
+-
+  shipto: 70103121
+  rut: "23.851.113-2"
+  calle: "Av Manuel Rodriguez"
+  numero: 26
+  cliente_direccion_id: 326031229
+  comuna_id: 31303
+-
+  shipto: 70103228
+  rut: "34.242.924-1"
+  calle: "Av. Los trapenses"
+  numero: 3515
+  cliente_direccion_id: 33503224
+  comuna_id: 32253
+-
+  shipto: 70103270
+  rut: "34.242.924-1"
+  calle: "Av. San Pablo"
+  numero: 4870
+  cliente_direccion_id: 34803271
+  comuna_id: 32311
+-
+  shipto: 70103301
+  rut: "30.778.987-9"
+  calle: "Avenida Los Toros"
+  numero: 5441
+  cliente_direccion_id: 354033034
+  comuna_id: 31168
+-
+  shipto: 70103577
+  rut: "27.315.050-5"
+  calle: "Pedro Fontova"
+  numero: 5810
+  cliente_direccion_id: 35803579
+  comuna_id: 31585
+-
+  shipto: 70103511
+  rut: "20.387.176-4"
+  calle: "José Joaquín Perez"
+  numero: 6140
+  cliente_direccion_id: 361035114
+  comuna_id: 31152
+-
+  shipto: 70103209
+  rut: "48.098.672-2"
+  calle: "Av. José Miguel Carrera"
+  numero: 6610
+  cliente_direccion_id: 366032031
+  comuna_id: 32342
+-
+  shipto: 70103371
+  rut: "34.242.924-1"
+  calle: "Claudio Vicuña"
+  numero: 696
+  cliente_direccion_id: 36903378
+  comuna_id: 32372
+-
+  shipto: 70103027
+  rut: "44.634.735-7"
+  calle: "1 Norte"
+  numero: 869
+  cliente_direccion_id: 386030234
+  comuna_id: 32719
+-
+  shipto: 70103517
+  rut: "48.098.672-2"
+  calle: "Jose Pedro Alessandri"
+  numero: 1132
+  cliente_direccion_id: 411035110
+  comuna_id: 33182
+-
+  shipto: 70103233
+  rut: "34.242.924-1"
+  calle: "Av. Membrillar"
+  numero: 20
+  depto: 34
+  cliente_direccion_id: 42003234
+  comuna_id: 32294
+-
+  shipto: 70103186
+  rut: "44.634.735-7"
+  calle: "Av. Estado"
+  numero: 43
+  cliente_direccion_id: 443031828
+  comuna_id: 32839
+-
+  shipto: 70103367
+  rut: "23.851.113-2"
+  calle: "Cienfuegos"
+  numero: 527
+  cliente_direccion_id: 45203361
+  comuna_id: 31444
+-
+  shipto: 70103529
+  rut: "23.851.113-2"
+  calle: "Maipú"
+  numero: 646
+  cliente_direccion_id: 46403521
+  comuna_id: 31226
+-
+  shipto: 70103592
+  rut: "44.634.735-7"
+  calle: "Principe de Gales"
+  numero: 7271
+  cliente_direccion_id: 47203593
+  comuna_id: 33054
+-
+  shipto: 70103063
+  rut: "34.242.924-1"
+  calle: "Almirante Riveros"
+  numero: 17
+  cliente_direccion_id: 517030613
+  comuna_id: 32069
+-
+  shipto: 70103636
+  rut: "37.706.861-7"
+  calle: "San Martín"
+  numero: 174
+  cliente_direccion_id: 517036328
+  comuna_id: 32700
+-
+  shipto: 70103306
+  rut: "30.778.987-9"
+  calle: "Avenida Pajaritos"
+  numero: 2689
+  cliente_direccion_id: 526033032
+  comuna_id: 31893
+-
+  shipto: 70103686
+  rut: "34.242.924-1"
+  calle: "v. Jorge Alessandri"
+  numero: 3177
+  cliente_direccion_id: 53103682
+  comuna_id: 32401
+-
+  shipto: 70103695
+  rut: "34.242.924-1"
+  calle: "Valparaiso"
+  numero: 569
+  cliente_direccion_id: 556036934
+  comuna_id: 32575
+-
+  shipto: 70103322
+  rut: "20.387.176-4"
+  calle: "Bandera"
+  numero: 814
+  cliente_direccion_id: 581033225
+  comuna_id: 31107
+-
+  shipto: 70103159
+  rut: "23.851.113-2"
+  calle: "Av. Cesar Ercilla"
+  numero: 1075
+  cliente_direccion_id: 610031519
+  comuna_id: 31341
+-
+  shipto: 70103171
+  rut: "30.778.987-9"
+  calle: "Av. Concha y Toro"
+  numero: 1149
+  cliente_direccion_id: 611031717
+  comuna_id: 31760
+-
+  shipto: 70103561
+  rut: "44.634.735-7"
+  calle: "Obispo Orrego"
+  numero: 1250
+  cliente_direccion_id: 612035610
+  comuna_id: 32938
+-
+  shipto: 70103596
+  rut: "27.315.050-5"
+  calle: "Prolongación J.J.Pérez"
+  numero: 12010
+  cliente_direccion_id: 612035917
+  comuna_id: 31606
+-
+  shipto: 70103261
+  rut: "37.706.861-7"
+  calle: "Av. Ramón Barros Luco"
+  numero: 1399
+  depto: 567
+  cliente_direccion_id: 613032626
+  comuna_id: 32614
+-
+  shipto: 70103720
+  rut: "44.634.735-7"
+  calle: "Zapadores"
+  numero: 1320
+  cliente_direccion_id: 613037215
+  comuna_id: 33012
+-
+  shipto: 70103494
+  rut: "48.098.672-2"
+  calle: "Huerfános"
+  numero: 1437
+  cliente_direccion_id: 614034928
+  comuna_id: 31107
+-
+  shipto: 70103513
+  rut: "20.387.176-4"
+  calle: "Jose Luis Coo"
+  numero: 1558
+  cliente_direccion_id: 615035117
+  comuna_id: 31168
+-
+  shipto: 70103328
+  rut: "30.778.987-9"
+  calle: "Buenaventura"
+  numero: 1770
+  cliente_direccion_id: 61703328
+  comuna_id: 31933
+-
+  shipto: 70103549
+  rut: "34.242.924-1"
+  calle: "Merced"
+  numero: 25
+  otro: "Mall"
+  cliente_direccion_id: 62503541
+  comuna_id: 31324
+-
+  shipto: 70103259
+  rut: "48.098.672-2"
+  calle: "Av. Pedro de Valdivia"
+  numero: 3362
+  cliente_direccion_id: 633032510
+  comuna_id: 33182
+-
+  shipto: 70103277
+  rut: "34.242.924-1"
+  calle: "Av. Santa Maria"
+  numero: 3962
+  cliente_direccion_id: 639032716
+  comuna_id: 32319
+-
+  shipto: 70103487
+  rut: "44.634.735-7"
+  calle: "Guanaco"
+  numero: 4480
+  cliente_direccion_id: 64403482
+  comuna_id: 33012
+-
+  shipto: 70103222
+  rut: "34.242.924-1"
+  calle: "Av. Larraín"
+  numero: 6677
+  cliente_direccion_id: 666032211
+  comuna_id: 32220
+-
+  shipto: 70103642
+  rut: "30.778.987-9"
+  calle: "Santa Amalia"
+  numero: 1763
+  cliente_direccion_id: 717036429
+  comuna_id: 31709
+-
+  shipto: 70103601
+  rut: "34.242.924-1"
+  calle: "Providencia"
+  numero: 2178
+  cliente_direccion_id: 721036014
+  comuna_id: 32179
+-
+  shipto: 70103318
+  rut: "27.315.050-5"
+  calle: "Balmaceda"
+  numero: 2355
+  cliente_direccion_id: 72303313
+  comuna_id: 31560
+-
+  shipto: 70103273
+  rut: "34.242.924-1"
+  calle: "Av. Santa Maria"
+  numero: 2415
+  cliente_direccion_id: 724032719
+  comuna_id: 31492
+-
+  shipto: 70103296
+  rut: "30.778.987-9"
+  calle: "Avda. Bernardo O'Higgins"
+  numero: 314
+  cliente_direccion_id: 731032925
+  comuna_id: 31886
+-
+  shipto: 70103044
+  rut: "44.634.735-7"
+  calle: "4 Poniente"
+  numero: 638
+  cliente_direccion_id: 763030411
+  comuna_id: 32719
+-
+  shipto: 70103024
+  rut: "23.851.113-2"
+  calle: "1 Norte"
+  numero: 1201
+  cliente_direccion_id: 812030220
+  comuna_id: 31219
+-
+  shipto: 70103533
+  rut: "44.634.735-7"
+  calle: "Manquehue"
+  numero: 1700
+  cliente_direccion_id: 817035318
+  comuna_id: 32790
+-
+  shipto: 70103183
+  rut: "34.242.924-1"
+  calle: "Av. Ercilla"
+  numero: 190
+  cliente_direccion_id: 819031827
+  comuna_id: 31501
+-
+  shipto: 70103191
+  rut: "30.778.987-9"
+  calle: "Av. Francisco de Aguirre"
+  numero: 2
+  cliente_direccion_id: 82031911
+  comuna_id: 31786
+-
+  shipto: 70103135
+  rut: "48.098.672-2"
+  calle: "Av. 5 de Abril"
+  numero: 216
+  cliente_direccion_id: 82103135
+  comuna_id: 30984
+-
+  shipto: 70103086
+  rut: "44.634.735-7"
+  calle: "Apoquindo"
+  numero: 2270
+  cliente_direccion_id: 822030825
+  comuna_id: 32790
+-
+  shipto: 70103608
+  rut: "34.242.924-1"
+  calle: "R. Sotomayor"
+  numero: 230
+  cliente_direccion_id: 823036016
+  comuna_id: 32050
+-
+  shipto: 70103471
+  rut: "44.634.735-7"
+  calle: "Gran Avenida"
+  numero: 5485
+  cliente_direccion_id: 854034711
+  comuna_id: 32949
+-
+  shipto: 70103476
+  rut: "44.634.735-7"
+  calle: "Gran Avenida"
+  numero: 9150
+  cliente_direccion_id: 891034726
+  comuna_id: 32982
+-
+  shipto: 70103230
+  rut: "34.242.924-1"
+  calle: "Av. Manantiales"
+  numero: 1021
+  cliente_direccion_id: 910032313
+  comuna_id: 31270
+-
+  shipto: 70103289
+  rut: "34.242.924-1"
+  calle: "Av. Tobalaba"
+  numero: 13949
+  cliente_direccion_id: 913032813
+  comuna_id: 32322
+-
+  shipto: 70103581
+  rut: "34.242.924-1"
+  calle: "Pedro Montt"
+  numero: 1845
+  cliente_direccion_id: 918035833
+  comuna_id: 32069
+-
+  shipto: 70103051
+  rut: "20.387.176-4"
+  calle: "Alameda"
+  numero: 2843
+  cliente_direccion_id: 928030522
+  comuna_id: 31107
+-
+  shipto: 70103455
+  rut: "20.387.176-4"
+  calle: "General Artigas"
+  numero: 2851
+  cliente_direccion_id: 928034516
+  comuna_id: 31146
+-
+  shipto: 70103355
+  rut: "34.242.924-1"
+  calle: "Chacabuco"
+  numero: 42
+  cliente_direccion_id: 942033524
+  comuna_id: 32381
+-
+  shipto: 70103411
+  rut: "16.923.239-3"
+  calle: "Ecuador"
+  numero: 5455
+  cliente_direccion_id: 954034121
+  comuna_id: 31027
+-
+  shipto: 70103358
+  rut: "23.851.113-2"
+  calle: "Chacabuco"
+  numero: 555
+  cliente_direccion_id: 955033517
+  comuna_id: 31422
+-
+  shipto: 70103388
+  rut: "20.387.176-4"
+  calle: "Coventry"
+  numero: 601
+  depto: 3
+  cliente_direccion_id: 960033823
+  comuna_id: 31146
+-
+  shipto: 70103151
+  rut: "30.778.987-9"
+  calle: "Av. Arturo Prat"
+  numero: 651
+  depto: 45
+  cliente_direccion_id: 965031522
+  comuna_id: 31736
+-
+  shipto: 70103362
+  rut: "44.634.735-7"
+  calle: "Chacabuco"
+  numero: 70
+  cliente_direccion_id: 970033615
+  comuna_id: 32894
+-
+  shipto: 70103376
+  rut: "44.634.735-7"
+  calle: "Collín"
+  numero: 866
+  cliente_direccion_id: 986033728
+  comuna_id: 32897

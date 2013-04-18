@@ -49,6 +49,7 @@ namespace :cdb do
     ActiveRecord::Base.connection.drop_database(DIR_CONF["database"]) rescue nil
   end
 
+
 end
 
 

@@ -11,17 +11,3 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415141723) do
-
-  create_table "direcciones", :force => true do |t|
-    t.string   "rs",                   :limit => 12, :null => false
-    t.string   "direccion",                          :null => false
-    t.string   "num",                                :null => false
-    t.string   "depto"
-    t.string   "otros"
-    t.string   "cliente_direccion_id",               :null => false
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-  end
-
-end

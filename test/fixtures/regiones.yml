@@ -1,0 +1,49 @@
+%YAML 1.1
+---
+# ODS_DB.regiones
+-
+  id: 1
+  nombre: "Tarapacá"
+-
+  id: 2
+  nombre: "Antofagasta"
+-
+  id: 3
+  nombre: "Atacama"
+-
+  id: 4
+  nombre: "Coquimbo"
+-
+  id: 5
+  nombre: "Valparaíso"
+-
+  id: 6
+  nombre: "Lib. Gral. Bernardo O'Higgins"
+-
+  id: 7
+  nombre: "Maule"
+-
+  id: 8
+  nombre: "Biobío"
+-
+  id: 9
+  nombre: "La Araucanía"
+-
+  id: 10
+  nombre: "Los Lagos"
+-
+  id: 11
+  nombre: "Aysén del General Carlos Ibáñez del Campo"
+-
+  id: 12
+  nombre: "Magallanes y Antártica Chilena"
+-
+  id: 13
+  nombre: "Metropolitana de Santiago"
+-
+  id: 14
+  nombre: "Los Ríos"
+-
+  id: 15
+  nombre: "Arica y Parinacota"
+
