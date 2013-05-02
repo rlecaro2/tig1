@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
 	def receive(email)
 		Rails.logger.debug(emal)
 		p = Pedido.new
-		p.numero = -1
+		p.numero = "BORRAME"
 		p.save
 	end
 end
