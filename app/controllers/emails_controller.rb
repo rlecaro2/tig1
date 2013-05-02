@@ -1,12 +1,12 @@
 class EmailsController < ApplicationController
-	skip_before_filter :verify_authenticity_token
+  skip_before_filter :verify_authenticity_token
 
-	def create
-		if request.headers["Authorization"] != "integra1"
-			return head(:unauthorized)
-		end
+  def create
+    if request.headers["Authorization"] != "integra1"
+      return head(:unauthorized)
+    end
     params[:email][:pedidos].each do |p|
-		  pedido = Pedido.new
+      pedido = Pedido.new
       pedido.sku = p[:sku]
       pedido.hora_llegada = p[:horaLlegada]
       pedido.fecha = p[:fecha]
@@ -16,7 +16,7 @@ class EmailsController < ApplicationController
       pedido.unidad = p[:unidad]
       pedido.save
     end
-	head :ok
-	end
+  head :ok
+  end
 
 end
