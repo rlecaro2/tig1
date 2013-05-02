@@ -5,7 +5,17 @@ class EmailsController < ApplicationController
 		if request.headers["Authorization"] != "integra1"
 			return head(:unauthorized)
 		end
-		UserMailer.receive(params[:email][:raw])
+    params[:email][:pedidos].each do |p|
+		  pedido = Pedido.new
+      pedido.sku = p[:sku]
+      pedido.hora_llegada = p[:horaLlegada]
+      pedido.fecha = p[:fecha]
+      pedido.fecha_llegada = p[:fechaLlegada]
+      pedido.cantidad = p[:cantidad]
+      pedido.direccion_id = p[:direccionId]
+      pedido.unidad = p[:unidad]
+      pedido.save
+    end
 	head :ok
 	end
 
