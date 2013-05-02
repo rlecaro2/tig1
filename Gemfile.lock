@@ -87,6 +87,8 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    remail (0.0.3)
+      activeresource
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -116,5 +118,6 @@ DEPENDENCIES
   mongoid
   mysql2
   rails (= 3.2.13)
+  remail
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

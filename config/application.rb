@@ -58,5 +58,15 @@ module Integra1
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators do |g| 
+        g.orm :active_record 
+    end
+    
+    config.action_mailer.delivery_method = :remail
+    config.action_mailer.remail_settings = {
+      :app_id  => "hualpenpedidos1",
+      :api_key => "integra1"
+    }
   end
 end
