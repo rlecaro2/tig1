@@ -18,7 +18,7 @@ test:
   username: root
 production:
   adapter: mysql2
-  database: prod
+  database: dev
   username: root
 
 integra1:
@@ -32,7 +32,7 @@ integra1:
     username: root
   production:
     adapter: mysql2
-    database: integra1_prod
+    database: integra1_dev
     username: root
 
 dir:
@@ -46,5 +46,5 @@ dir:
     username: root
   production:
     adapter: mysql2
-    database: dir_prod
+    database: dir_dev
     username: root
