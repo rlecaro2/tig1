@@ -1,0 +1,9 @@
+<h1>Pedidos</h1>
+<ul>
+<% @pedidos.each do |p| %>
+  <li>
+    <%= p.fecha + " " + p.hora_llegada + ": Pedido de " + p.cantidad + " " + p.unidad + " de producto sku: " + p.sku %>
+  </li>
+<% end %>    
+
+</ul>
