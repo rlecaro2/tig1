@@ -1,7 +1,7 @@
 class EditPedidos < ActiveRecord::Migration
   def change
     remove_column :pedidos, :numero
-    change :pedidos do |t|
+    change_table :pedidos do |t|
       t.string :sku
       t.time :hora_llegada
       t.date :fecha
@@ -9,6 +9,6 @@ class EditPedidos < ActiveRecord::Migration
       t.float :cantidad
       t.integer :direccion_id
       t.string :unidad
-      t.timestamps
+    end
   end
 end
