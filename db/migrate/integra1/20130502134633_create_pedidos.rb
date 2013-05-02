@@ -3,7 +3,6 @@ class CreatePedidos < ActiveRecord::Migration
   	create_table :pedidos do |t|
       t.string :numero
   	  t.timestamps
-	end
+    end
   end
-
 end
