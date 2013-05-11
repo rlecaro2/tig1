@@ -4,6 +4,6 @@ class Pedido < ActiveRecord::Base
 
   def process(id)
     p = find(id)
-    Rails.logger.debug p.fecha.to_s + " " + p.hora_llegada.to_s + ": Pedido de " + p.cantidad.to_s + " " + p.unidad.to_s + " de producto sku: " + p.sku.to_s
+    logger.debug "Enqueued: " + p.fecha.to_s + " " + p.hora_llegada.to_s + ": Pedido de " + p.cantidad.to_s + " " + p.unidad.to_s + " de producto sku: " + p.sku.to_s
   end
 end
