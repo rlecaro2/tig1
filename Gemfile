@@ -26,7 +26,8 @@ end
 gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
-
+gem "oauth-plugin"
+gem 'queue_classic'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
