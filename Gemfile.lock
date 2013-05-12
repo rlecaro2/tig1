@@ -123,10 +123,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   coffee-rails (~> 3.2.1)
-<<<<<<< HEAD
-=======
   fastercsv
->>>>>>> 1466ef3ca3ff7b68860e965939b2674ab9db69ce
   httparty
   jquery-rails
   mongoid
