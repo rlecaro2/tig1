@@ -5,5 +5,6 @@ class Pedido < ActiveRecord::Base
   def self.process(id)
     p = find(id)
     p.status = "processing"
+    p.save
   end
 end
