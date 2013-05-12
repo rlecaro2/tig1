@@ -7,8 +7,4 @@ class Pedido < ActiveRecord::Base
     p.status = "processing"
     p.save
   end
-
-  def self.process()
-    self.process(self.id)
-  end
 end
