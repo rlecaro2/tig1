@@ -29,6 +29,11 @@ gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
 
+gem 'vtiger' 
+
+gem 'yajl-ruby'
+
+gem 'fastercsv'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,6 +1,6 @@
 Integra1::Application.routes.draw do
 
-  match 'email' => 'emails#create'
+  post 'email' => 'emails#create'
   match 'pedidos' => 'pedidos#index'
   match 'bodegas' => 'bodegas#index'
   
