@@ -1,0 +1,57 @@
++------------------+
+| Products Fields  |
++------------------+
+| productid        |
+| product_no       |
+| productname      |
+| productcode      |
+| productcategory  |
+| manufacturer     |
+| qty_per_unit     |
+| unit_price       |
+| weight           |
+| pack_size        |
+| sales_start_date |
+| sales_end_date   |
+| start_date       |
+| expiry_date      |
+| cost_factor      |
+| commissionrate   |
+| commissionmethod |
+| discontinued     |
+| usageunit        |
+| reorderlevel     |
+| website          |
+| taxclass         |
+| mfr_part_no      |
+| vendor_part_no   |
+| serialno         |
+| qtyinstock       |
+| productsheet     |
+| qtyindemand      |
+| glacct           |
+| vendor_id        |
+| imagename        |
+| currency_id      |
+| cf_656		   |  Sku
+| cf_657		   |  Tipo
+| cf_658		   |  Marca
+| cf_659		   |  Fundo
+| cf_660		   |  Descripcion
++------------------+
+
++------------------+
+| Contacts Fields  |
++------------------+
+| cf_641		   |  Shipto
+| cf_645		   |  Direccion
+| cf_646		   |  Numero
+| cf_647		   |  Depto
+| cf_649		   |  Otros  
+| cf_650		   |  Rut
+| cf_651		   |  Comuna
+| cf_652		   |  Region
+| cf_653		   |  ClienteDireccionId
+| cf_654		   |  ComunaId
+| cf_655		   |  RegionId
++------------------+
