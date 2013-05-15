@@ -76,7 +76,9 @@ GEM
     multi_xml (0.5.3)
     multipart-post (1.2.0)
     mysql2 (0.3.11)
+    mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.9)
+    nokogiri (1.5.9-x86-mingw32)
     oauth (0.4.7)
     oauth-plugin (0.4.1)
       multi_json
@@ -147,9 +149,11 @@ GEM
       activesupport (>= 2.3.4)
       chronic (>= 0.6.3)
     yajl-ruby (1.1.0)
+    yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   awesome_print
