@@ -3,69 +3,69 @@ class Pedido < ActiveRecord::Base
   attr_accessible :sku, :hora_llegada, :cantidad, :fecha, :rut, :fecha_llegada, :unidad, :status
 
 
-def self.process (id)
+  def self.process (id)
 
-  p = Pedido.find_by_id(id)
-  p.status = "Procesando"
-  p.save
-  #Se obtiene la direccion
-  d = p.Direccion
-  #Se obtiene la información de contacto
-  c = VtigerHelper.getContactByRut(p.rut)
-
-  VtigerHelper.createSalesOrder(p.sku, c["cf_650"], p.fecha, p.cantidad, p.unidad)
-
-  #Se ve si el cliente es preferencial
-  esPreferencial = false
-  if c["cf_650"] == "34.242.924-1" #este es el rut preferencial y cf_650 es el campo que guarda el rut en vTiger
-    esPreferencial = true
-  end
-
-  #Obtencion de las reservas y los stocks
-  reservado = Reserva.find_by_sku(p.sku)
-  disponible = Bodegas.obtener_stock_disponible(p.sku,55)
-  if esPreferencial
-    if p.cantidad <= disponible
-     reservado.cantidad -= p.cantidad
-     if reservado.cantidad < 0
-      reservado.cantidad = 0
-     end
-     reservado.save
-    else
-     p.status = "Quiebre por falta de stock"
-     p.save
-     return
-    end
-  else #No es preferencial
-    if p.cantidad > disponible - reservado.cantidad
-     p.status = "Quiebre por falta de stock"
-     p.save
-     return
-    end
-  end
-
-  Bodegas.traspaso(p.sku,p.cantidad,"disponible","despacho")
-
-  #Acá habría que revisar si el clima permite el despacho
-  #Si no se puede despachar hay que reversar la reserva
-  #También hay que mover el stock de bodega
-  buenClima = true
-  if not buenClima
-    #Bodegas.traspaso(p.sku,p.cantidad,"despacho","disponible")
-  else
-    Bodegas.despachar(p.sku,p.cantidad)
-    p.status = "Despachado"
+    p = Pedido.find_by_id(id)
+    p.status = "Procesando"
     p.save
+    #Se obtiene la direccion
+    d = p.Direccion
+    #Se obtiene la información de contacto
+    c = VtigerHelper.getContactByShipTo(p.direccion_id)
 
-    t = Transaccion.new
-    t.pedido = p
-    t.save
+    VtigerHelper.createSalesOrder(p.sku, c["cf_641"], p.fecha, p.cantidad, p.unidad)
+
+    #Se ve si el cliente es preferencial
+    esPreferencial = false
+    if c["cf_650"] == "34.242.924-1" #este es el rut preferencial y cf_650 es el campo que guarda el rut en vTiger
+      esPreferencial = true
+    end
+
+    #Obtencion de las reservas y los stocks
+    reservado = Reserva.find_by_sku(p.sku)
+    disponible = Bodegas.obtener_stock_disponible(p.sku,55)
+    if esPreferencial
+      if p.cantidad <= disponible
+       reservado.cantidad -= p.cantidad
+       if reservado.cantidad < 0
+        reservado.cantidad = 0
+       end
+       reservado.save
+      else
+       p.status = "Quiebre por falta de stock"
+       p.save
+       return
+      end
+    else #No es preferencial
+      if p.cantidad > disponible - reservado.cantidad
+       p.status = "Quiebre por falta de stock"
+       p.save
+       return
+      end
+    end
+
+    Bodegas.traspaso(p.sku,p.cantidad,"disponible","despacho")
+
+    #Acá habría que revisar si el clima permite el despacho
+    #Si no se puede despachar hay que reversar la reserva
+    #También hay que mover el stock de bodega
+    buenClima = true
+    if not buenClima
+      #Bodegas.traspaso(p.sku,p.cantidad,"despacho","disponible")
+    else
+      Bodegas.despachar(p.sku,p.cantidad)
+      p.status = "Despachado"
+      p.save
+
+      t = Transaccion.new
+      t.pedido = p
+      t.save
+    end
   end
-end
 
-def self.Direccion
-  d = Direccion.find_by_shipto(self.direccion_id)
-  return d
-end
+  def self.Direccion
+    d = Direccion.find_by_shipto(self.direccion_id)
+    return d
+  end
 
 end
