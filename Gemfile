@@ -27,7 +27,6 @@ gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
 gem "oauth-plugin"
-gem 'pg', '~> 0.11.0'
 gem 'queue_classic'
 
 # To use ActiveModel has_secure_password
