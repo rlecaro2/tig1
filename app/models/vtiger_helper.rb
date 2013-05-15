@@ -1,7 +1,6 @@
 class VtigerHelper
 
-	def self.login
-		
+	def self.login		
 		settings = {
 	  		:username => 'admin',
 			:key => 'AMmccaiTRPbjZvN',
@@ -69,14 +68,14 @@ class VtigerHelper
 		return nil
 	end
 
-	def self.createSalesOrder(pruduct_sku, contact_rut, fecha_string, quantity, unit, price=0)
+	def self.createSalesOrder(product_sku, contact_rut, fecha_string, quantity, unit, price=0)
 
 		organization = VtigerHelper.getOrganizationByRut(contact_rut)
 		contact = VtigerHelper.getContactByRut(contact_rut)
-		product = VtigerHelper.getProductBySku(pruduct_sku)
+		product = VtigerHelper.getProductBySku(product_sku)
 
 		subject = "Pedido de " + product["cf_660"]
-		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + pruduct_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
+		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + product_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
 
 		object_map = {
 			'subject' => subject,

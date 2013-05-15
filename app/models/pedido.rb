@@ -4,13 +4,16 @@ class Pedido < ActiveRecord::Base
 
 
 def self.process (id)
+
   p = Pedido.find_by_id(id)
   p.status = "Procesando"
   p.save
   #Se obtiene la direccion
-  d = Direccion.find_by_rut(p.rut)
+  d = p.Direccion
   #Se obtiene la información de contacto
   c = VtigerHelper.getContactByRut(p.rut)
+
+  VtigerHelper.createSalesOrder(p.sku, c["cf_650"], p.fecha, p.cantidad, p.unidad)
 
   #Se ve si el cliente es preferencial
   esPreferencial = false
@@ -35,7 +38,7 @@ def self.process (id)
     end
   else #No es preferencial
     if p.cantidad > disponible - reservado.cantidad
-     p.status="Quiebre por falta de stock"
+     p.status = "Quiebre por falta de stock"
      p.save
      return
     end
@@ -53,7 +56,16 @@ def self.process (id)
     Bodegas.despachar(p.sku,p.cantidad)
     p.status = "Despachado"
     p.save
+
+    t = Transaccion.new
+    t.pedido = p
+    t.save
   end
+end
+
+def self.Direccion
+  d = Direccion.find_by_shipto(self.direccion_id)
+  return d
 end
 
 end
