@@ -1,10 +1,12 @@
 class Pedido < ActiveRecord::Base
   establish_connection INTEGRA1_CONF
-  attr_accessible :sku, :hora_llegada, :cantidad, :fecha, :rut, :fecha_llegada, :unidad
+  attr_accessible :sku, :hora_llegada, :cantidad, :fecha, :rut, :fecha_llegada, :unidad, :status
 
 
 def self.process (id)
   p = Pedido.find_by_id(id)
+  p.status = "Procesando"
+  p.save
   #Se obtiene la direccion
   d = Direccion.find_by_rut(p.rut)
   #Se obtiene la información de contacto
@@ -18,12 +20,12 @@ def self.process (id)
 
   #Obtencion de las reservas y los stocks
   reservado = Reserva.find_by_sku(p.sku)
-  #disponible = Bodegas.obtener_stock_disponible(p.sku,55)
+  disponible = Bodegas.obtener_stock_disponible(p.sku,55)
   if esPreferencial
     if p.cantidad <= disponible
      reservado.cantidad -= p.cantidad
      if reservado.cantidad < 0
-     reservado.cantidad = 0
+      reservado.cantidad = 0
      end
      reservado.save
     else
@@ -31,25 +33,26 @@ def self.process (id)
      p.save
      return
     end
-  else
-    if p.cantidad > disponible-reservado.cantidad
+  else #No es preferencial
+    if p.cantidad > disponible - reservado.cantidad
      p.status="Quiebre por falta de stock"
      p.save
      return
     end
   end
 
-  #Bodegas.traspaso(p.sku,p.cantidad,"disponible","despacho")
+  Bodegas.traspaso(p.sku,p.cantidad,"disponible","despacho")
 
   #Acá habría que revisar si el clima permite el despacho
   #Si no se puede despachar hay que reversar la reserva
   #También hay que mover el stock de bodega
-  buenClima=true
-
+  buenClima = true
   if not buenClima
     #Bodegas.traspaso(p.sku,p.cantidad,"despacho","disponible")
   else
-    #Bodegas.despachar(p.sku,p.cantidad)
+    Bodegas.despachar(p.sku,p.cantidad)
+    p.status = "Despachado"
+    p.save
   end
 end
 

@@ -3,6 +3,8 @@ Integra1::Application.routes.draw do
   post 'email' => 'emails#create'
   match 'pedidos' => 'pedidos#index'
   match 'bodegas' => 'bodegas#index'
+
+  match 'reponer' => 'bodegas#reponer'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

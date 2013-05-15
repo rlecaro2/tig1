@@ -1,6 +1,5 @@
 class Bodega
-	def self.mover(almacen_desde,almacen_hasta,sku, units)
-		
+	def self.mover(almacen_desde,almacen_hasta,sku, units)		
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params="+almacen_desde.to_s+","+almacen_hasta.to_s+","+sku.to_s+","+units.to_s)
 		rescue 
@@ -10,8 +9,7 @@ class Bodega
 		return true
 	end
 
-	def self.preparar_despacho(sku, units)
-		
+	def self.preparar_despacho(sku, units)		
 		begin
 			resp = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params=55,102"+sku.to_s+","+units.to_s)
 		rescue
@@ -23,7 +21,6 @@ class Bodega
 	end
 
 	def self.obtener_stock(sku, almacen)		
-		
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku.to_s)			
 		rescue
@@ -41,14 +38,18 @@ class Bodega
 		return b
 	end
 
-	def self.despachar(sku,cantidad)
-		
+	def self.despachar(sku,cantidad)		
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=despacharStock&key=45XtPg&params=102,"+sku.to_s+","+cantidad.to_s)
 		rescue
 			return false
 		end
 		return true
+	end
+
+	def self.reponer(sku, almacen)
+		stock = Bodega.obtener_stock(sku, almacen)
+		Bodega.mover(almacen,55,stock)
 	end
 		
 #stock disponible 55(me lo de) sku 
