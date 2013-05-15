@@ -11,7 +11,11 @@ gem 'mongoid'
 
 gem "remail"
 
+gem 'gmaps4rails'
+
 gem "httparty"
+
+gem "seed_dump"
 
 # Gems used only for assets and not required
 # in production environments by default.
