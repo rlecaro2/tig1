@@ -1,0 +1,15 @@
+<h1>Bodega</h1>
+<div>
+	<% @objArray.each do |a| %>
+	<div style="margin-top=10px;background-color:#C8DDD7">
+		<h2>Almacen <%= a["almacenId"]%></h2>
+		<p>Capacidad: <%= a["capacidad"] %></p>
+		<p>tipo: <%= a["tipo"] %></p>
+		<p>bodega: <%= a["bodegaId"] %></p>
+		<p>longitud: <%= a["lon"] %></p>
+		<p>latitud: <%= a["lat"] %></p>
+	</div>
+	<% end %>
+</div>
+<p><%= @stock %></p>
+<p><%= @stock1 %></p>

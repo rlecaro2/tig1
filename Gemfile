@@ -11,6 +11,10 @@ gem 'mongoid'
 
 gem "remail"
 
+gem "httparty"
+
+gem 'google_drive'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,8 +30,18 @@ end
 gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
+
+
 gem "oauth-plugin"
+
 gem 'queue_classic'
+
+gem 'vtiger'
+
+gem 'yajl-ruby'
+
+gem 'fastercsv'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
