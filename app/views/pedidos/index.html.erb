@@ -2,7 +2,7 @@
 <ul>
 <% @pedidos.each do |p| %>
   <li>
-    <%= p.fecha.to_s + " " + p.hora_llegada.to_s + ": Pedido de " + p.cantidad.to_s + " " + p.unidad.to_s + " de producto sku: " + p.sku.to_s %>
+    <%= p.fecha.to_s + " " + p.hora_llegada.to_s + ": Pedido de " + p.cantidad.to_s + " " + p.unidad.to_s + " de producto sku: " + p.sku.to_s + " STATUS: " + p.status.to_s %>
   </li>
 <% end %>    
 
