@@ -15,7 +15,9 @@ gem 'gmaps4rails'
 
 gem "httparty"
 
-gem "seed_dump"
+gem 'google_drive'
+
+gem 'whenever'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,11 +35,17 @@ gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
 
-gem 'vtiger' 
+
+gem "oauth-plugin"
+
+gem 'queue_classic'
+
+gem 'vtiger'
 
 gem 'yajl-ruby'
 
 gem 'fastercsv'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

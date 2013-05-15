@@ -1,5 +1,4 @@
 class PedidosController < ApplicationController
-	layout 'application'
 
   def index
     @pedidos = Pedido.all    
