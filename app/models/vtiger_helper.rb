@@ -76,7 +76,7 @@ class VtigerHelper
 		product = VtigerHelper.getProductBySku(pruduct_sku)
 
 		subject = "Pedido de " + product["cf_660"]
-		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + pruduct_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion" + product["cf_660"]
+		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + pruduct_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
 
 		object_map = {
 			'subject' => subject,
@@ -98,13 +98,34 @@ class VtigerHelper
 		status = resp[0]
 		obj_id = resp[1]
 
+		if status
+			return obj_id
+		else
+			return nil
+		end
+
+	end
+
+	def self.cancelSalesOrderStatus( order_vtiger_id )
+
+		cmd = VtigerHelper.login
+
+		order = cmd.retrieve_object(order_vtiger_id)
+		new_status = { 'sostatus' => 'Cancelled', 'invoicestatus' => 'Created' }
+		object_map = order.merge new_status
+
 		puts object_map
 
-		if status
-			return resp
+		resp = cmd.updateobject( object_map )
+
+		success = resp['success']
+
+		if success 
+			return resp['result']
 		else
-			return resp	
+			return nil
 		end
+
 
 	end
 
