@@ -11,29 +11,3 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509201656) do
-
-  create_table "consumer_tokens", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "type",       :limit => 30
-    t.string   "token",      :limit => 1024
-    t.string   "secret"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  add_index "consumer_tokens", ["token"], :name => "index_consumer_tokens_on_token", :unique => true, :length => {"token"=>100}
-
-  create_table "pedidos", :force => true do |t|
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "sku"
-    t.time     "hora_llegada"
-    t.date     "fecha"
-    t.date     "fecha_llegada"
-    t.float    "cantidad"
-    t.integer  "direccion_id"
-    t.string   "unidad"
-  end
-
-end

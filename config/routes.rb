@@ -3,6 +3,10 @@ Integra1::Application.routes.draw do
   post 'email' => 'emails#create'
   match 'pedidos' => 'pedidos#index'
   match 'bodegas' => 'bodegas#index'
+
+  resources :pedidos do
+    get 'show_map'
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
