@@ -20,9 +20,9 @@ def self.process (id)
  if esPreferencial
  	if p.cantidad <= disponible
  	 reservado.cantidad -= p.cantidad
- 	 if reservado.cantidad <0
+ 	if reservado.cantidad <0
  	 reservado.cantidad=0
- 	 end
+ 	end
  	 reservado.save
  	else
  	 p.status="Quiebre por falta de stock"

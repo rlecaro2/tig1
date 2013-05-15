@@ -1,7 +1,11 @@
 class CreateTransacciones < ActiveRecord::Migration
-  def up
+  def change
+  create_table :transacciones do |t|
+  t.references :pedido
+  t.string :ruta
+  t.string :monto
+   
+  t.timestamps
   end
-
-  def down
   end
 end
