@@ -11,5 +11,9 @@
 	</div>
 	<% end %>
 </div>
-<p><%= @stock %></p>
-<p><%= @stock1 %></p>
+
+<% @stock.each do |b| %>
+	<% if(b["almacenId"]==55)%>
+		<p><%=b["almacenId"]%></p>
+	<% end %>
+<% end %>
