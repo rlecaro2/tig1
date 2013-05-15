@@ -7,7 +7,7 @@ class PedidosController < ApplicationController
   # GET /pedidos/1/showmap
   def show_map
   	@pedido = Pedido.find(params[:pedido_id])
-  	@direccion = Direccion.first
+  	@direccion = Direccion.find_by_shipto(@pedido.direccion_id)
 
   	@json = @direccion.to_gmaps4rails
 
