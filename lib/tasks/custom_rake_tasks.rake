@@ -33,6 +33,11 @@ namespace :cdb do
     ActiveRecord::Base.connection.create_database(DIR_CONF["database"])
   end
 
+  task :seed  => :environment do
+    puts "SEEDING"
+    require './db/seeds.rb'
+  end
+
   desc "Drop the databases"
   task :drop  => :environment do
     Rake::Task["cdb:drop_integra1"].invoke
@@ -48,7 +53,6 @@ namespace :cdb do
     puts "DROP DIR"
     ActiveRecord::Base.connection.drop_database(DIR_CONF["database"]) rescue nil
   end
-
 
 end
 

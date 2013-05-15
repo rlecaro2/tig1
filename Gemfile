@@ -11,6 +11,8 @@ gem 'mongoid'
 
 gem "remail"
 
+gem 'gmaps4rails'
+
 gem "httparty"
 
 gem 'google_drive'
