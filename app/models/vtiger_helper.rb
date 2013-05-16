@@ -60,9 +60,14 @@ class VtigerHelper
 	def self.getOrganizationByRut(rut)
 
 		rut = rut.to_s
+		search = "\r"+"#{rut.strip}"
+
+		if rut == '37.706.861-7'
+			search = "#{rut.strip}"
+		end
 
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut.strip}"	)
+		resp = cmd.query_element_by_field('Accounts','cf_640', search	)
 		status = resp[0]
 		obj_id = resp[1]
 		
