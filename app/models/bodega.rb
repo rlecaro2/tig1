@@ -50,6 +50,7 @@ class Bodega
 	def self.reponer(sku, almacen)
 		stock = Bodega.obtener_stock(sku, almacen)
 		Bodega.mover(almacen,55,sku,stock)
+		return stock
 	end
 		
 #stock disponible 55(me lo de) sku 
