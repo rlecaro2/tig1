@@ -23,7 +23,7 @@ class Pedido < ActiveRecord::Base
 
     #Obtencion de las reservas y los stocks
     reservado = Reserva.find_by_sku(p.sku)
-    disponible = Bodega.obtener_stock_disponible(p.sku,55)
+    disponible = Bodega.obtener_stock(p.sku,55)
     if esPreferencial
       if p.cantidad <= disponible
        reservado.cantidad -= p.cantidad
@@ -44,7 +44,7 @@ class Pedido < ActiveRecord::Base
       end
     end
 
-    Bodega.traspaso(p.sku,p.cantidad,"disponible","despacho")
+    Bodega.preparar_despacho(p.sku,p.cantidad)
 
     #Acá habría que revisar si el clima permite el despacho
     #Si no se puede despachar hay que reversar la reserva
