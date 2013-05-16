@@ -24,7 +24,7 @@ class VtigerHelper
 	def self.getContactByShipTo(shipto)
 		
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto}")
+		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto.strip}")
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -40,7 +40,7 @@ class VtigerHelper
 	def self.getProductBySku(sku)
 		
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Products','cf_656',"#{sku}")
+		resp = cmd.query_element_by_field('Products','cf_656',"#{sku.strip}")
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -56,7 +56,7 @@ class VtigerHelper
 	def self.getOrganizationByRut(rut)
 
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut}"	)
+		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut.strip}"	)
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -68,7 +68,7 @@ class VtigerHelper
 		return nil
 	end
 
-	def self.createSalesOrder(product_sku, contact_rut=nil ,shipto, fecha_string, quantity, unit, price=0)
+	def self.createSalesOrder(product_sku, contact_rut, shipto, fecha_string, quantity, unit, price=0)
 
 
 		organization = VtigerHelper.getOrganizationByRut(contact_rut)
