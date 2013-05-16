@@ -63,7 +63,7 @@ def self.process (id)
   end
 end
 
-def self.Direccion
+def Direccion
   d = Direccion.find_by_shipto(self.direccion_id)
   return d
 end
