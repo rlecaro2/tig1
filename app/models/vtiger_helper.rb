@@ -23,6 +23,8 @@ class VtigerHelper
 
 	def self.getContactByShipTo(shipto)
 		
+		shipto = shipto.to_s
+
 		cmd = VtigerHelper.login
 		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto.strip}")
 		status = resp[0]
@@ -39,6 +41,8 @@ class VtigerHelper
 
 	def self.getProductBySku(sku)
 		
+		sku = sku.to_s
+
 		cmd = VtigerHelper.login
 		resp = cmd.query_element_by_field('Products','cf_656',"#{sku.strip}")
 		status = resp[0]
@@ -54,6 +58,8 @@ class VtigerHelper
 	end
 
 	def self.getOrganizationByRut(rut)
+
+		rut = rut.to_s
 
 		cmd = VtigerHelper.login
 		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut.strip}"	)
