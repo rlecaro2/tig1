@@ -1,7 +1,7 @@
 class PedidosController < ApplicationController
 
   def index
-    @pedidos = Pedido.order(:fecha).page(params[:page]).per(10)
+    @pedidos = Pedido.order("fecha DESC").page(params[:page]).per(10)
   end
 
   # GET /pedidos/1
