@@ -117,12 +117,34 @@ class VtigerHelper
 
 	end
 
-	def self.cancelSalesOrderStatus( order_vtiger_id )
+	def self.cancelSalesOrder( order_vtiger_id )
 
 		cmd = VtigerHelper.login
 
 		order = cmd.retrieve_object(order_vtiger_id)
 		new_status = { 'sostatus' => 'Cancelled', 'invoicestatus' => 'Created' }
+		object_map = order.merge new_status
+
+		puts object_map
+
+		resp = cmd.updateobject( object_map )
+
+		success = resp['success']
+
+		if success 
+			return resp['result']
+		else
+			return nil
+		end
+
+	end
+
+	def self.dispatchSalesOrder( order_vtiger_id )
+
+		cmd = VtigerHelper.login
+
+		order = cmd.retrieve_object(order_vtiger_id)
+		new_status = { 'sostatus' => 'Delivered', 'invoicestatus' => 'Created' }
 		object_map = order.merge new_status
 
 		puts object_map

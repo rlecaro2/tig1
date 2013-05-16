@@ -35,7 +35,6 @@ gem 'jquery-rails'
 
 gem 'awesome_print', :require => 'ap'
 
-
 gem "oauth-plugin"
 
 gem 'queue_classic'
@@ -46,6 +45,9 @@ gem 'yajl-ruby'
 
 gem 'fastercsv'
 
+gem "twitter-bootstrap-rails"
+
+gem 'kaminari'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

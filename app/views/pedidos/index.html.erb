@@ -1,9 +1,37 @@
-<h1>Pedidos</h1>
-<ul>
-<% @pedidos.each do |p| %>
-  <li>
-    <%= p.fecha.to_s + " " + p.hora_llegada.to_s + ": Pedido de " + p.cantidad.to_s + " " + p.unidad.to_s + " de producto sku: " + p.sku.to_s + " STATUS: " + p.status.to_s %>
-  </li>
-<% end %>    
+<%- model_class = Pedido -%>
 
-</ul>
+<div class="page-header">
+	<h1>Pedidos</h1>
+</div>
+
+
+<%= paginate @pedidos %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:sku) %></th>
+      <th><%= model_class.human_attribute_name(:cantidad) %></th>
+      <th><%= model_class.human_attribute_name(:unidad) %></th>
+      <th><%= model_class.human_attribute_name(:rut) %></th>
+      <th><%= model_class.human_attribute_name(:fecha) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= link_to pedido.id,show_path(pedido) %></td>
+        <td><%= pedido.sku %></td>
+        <td><%= pedido.cantidad %></td>
+        <td><%= pedido.unidad %></td>
+        <td><%= pedido.rut %></td>
+        <td><%= pedido.fecha %></td>
+        <td><%= pedido.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @pedidos %>
