@@ -137,7 +137,25 @@ class VtigerHelper
 			return nil
 		end
 
+	end
+
+	def self.getAllProducts
+
+		cmd = VtigerHelper.login
+
+		length = cmd.query({:query => 'select count(*) from Products;'})['result'][0]['count'].to_i
+
+		num_requests = length / 100 + 1
+		results = []
+
+		num_requests.times do |i|
+			response = cmd.query({:query => "select * from Products limit #{i*100},#{i*100+100};"})['result']
+			results = results + response
+		end
+
+		return results
 
 	end
+
 
 end
