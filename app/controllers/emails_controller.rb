@@ -14,6 +14,7 @@ class EmailsController < ApplicationController
       pedido.cantidad = p[:cantidad]
       pedido.direccion_id = p[:direccionId]
       pedido.unidad = p[:unidad]
+      pedido.rut = p[:rut]
       pedido.save
       QC.enqueue "Pedido.process", pedido.id
     end
