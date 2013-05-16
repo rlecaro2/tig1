@@ -68,7 +68,7 @@ class VtigerHelper
 		return nil
 	end
 
-	def self.createSalesOrder(product_sku, shipto, fecha_string, quantity, unit, price=0)
+	def self.createSalesOrder(product_sku, contact_rut ,shipto, fecha_string, quantity, unit, price=0)
 
 		organization = VtigerHelper.getOrganizationByRut(contact_rut)
 		contact = VtigerHelper.getContactById(contact_id)

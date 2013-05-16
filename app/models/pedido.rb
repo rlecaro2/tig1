@@ -13,7 +13,7 @@ class Pedido < ActiveRecord::Base
     #Se obtiene la información de contacto
     c = VtigerHelper.getContactByShipTo(p.direccion_id)
 
-    VtigerHelper.createSalesOrder(p.sku, c["cf_641"], p.fecha, p.cantidad, p.unidad)
+    VtigerHelper.createSalesOrder(p.sku, p.rut ,c["cf_641"], p.fecha, p.cantidad, p.unidad)
 
     #Se ve si el cliente es preferencial
     esPreferencial = false
