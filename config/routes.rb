@@ -2,12 +2,10 @@ Integra1::Application.routes.draw do
 
   post 'email' => 'emails#create'
   root :to =>'application#index'
-
+  match 'reponer' => 'bodegas#reponer'
 
   resources :bodegas do
-    collection do
-      match 'reponer'
-    end
+
   end
 
   resources :pedidos do
