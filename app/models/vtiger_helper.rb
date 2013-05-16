@@ -83,7 +83,6 @@ class VtigerHelper
 		if(contact_rut.nil?)
 			contact_rut = contact["cf_650"]
 		end
-
 		organization = VtigerHelper.getOrganizationByRut(contact_rut)
 
 

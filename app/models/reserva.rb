@@ -19,6 +19,8 @@ class Reserva < ActiveRecord::Base
 			r.sku = sku
 			r.cantidad = cantidad
 			r.save
+
+			i += 1
 		end
 
 	end
