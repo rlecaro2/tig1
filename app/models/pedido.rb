@@ -9,7 +9,7 @@ class Pedido < ActiveRecord::Base
     p.status = "Procesando"
     p.save
     #Se obtiene la direccion
-    d = p.Direccion
+    d = p.direccion
     #Se obtiene la información de contacto
     c = VtigerHelper.getContactByShipTo(p.direccion_id)
 
@@ -63,7 +63,7 @@ class Pedido < ActiveRecord::Base
     end
   end
 
-  def self.Direccion
+  def direccion
     d = Direccion.find_by_shipto(self.direccion_id)
     return d
   end
