@@ -1,7 +1,6 @@
 class VtigerHelper
 
-	def self.login
-		
+	def self.login		
 		settings = {
 	  		:username => 'admin',
 			:key => 'AMmccaiTRPbjZvN',
@@ -22,10 +21,12 @@ class VtigerHelper
 
 	end
 
-	def self.getContactByRut(rut)
+	def self.getContactByShipTo(shipto)
 		
+		shipto = shipto.to_s
+
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Contacts','cf_650',"#{rut}")
+		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto.strip}")
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -40,8 +41,10 @@ class VtigerHelper
 
 	def self.getProductBySku(sku)
 		
+		sku = sku.to_s
+
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Products','cf_656',"#{sku}")
+		resp = cmd.query_element_by_field('Products','cf_656',"#{sku.strip}")
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -56,8 +59,10 @@ class VtigerHelper
 
 	def self.getOrganizationByRut(rut)
 
+		rut = rut.to_s
+
 		cmd = VtigerHelper.login
-		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut}"	)
+		resp = cmd.query_element_by_field('Accounts','cf_640',	"\r"+"#{rut.strip}"	)
 		status = resp[0]
 		obj_id = resp[1]
 		
@@ -69,14 +74,20 @@ class VtigerHelper
 		return nil
 	end
 
-	def self.createSalesOrder(pruduct_sku, contact_rut, fecha_string, quantity, unit, price=0)
+	def self.createSalesOrder(product_sku, contact_rut, shipto, fecha_string, quantity, unit, price=0)
 
+
+		contact = VtigerHelper.getContactByShipTo(shipto)
+		product = VtigerHelper.getProductBySku(product_sku)
+
+		if(contact_rut.nil?)
+			contact_rut = contact["cf_650"]
+		end
 		organization = VtigerHelper.getOrganizationByRut(contact_rut)
-		contact = VtigerHelper.getContactByRut(contact_rut)
-		product = VtigerHelper.getProductBySku(pruduct_sku)
+
 
 		subject = "Pedido de " + product["cf_660"]
-		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + pruduct_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
+		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + product_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
 
 		object_map = {
 			'subject' => subject,
@@ -106,7 +117,7 @@ class VtigerHelper
 
 	end
 
-	def self.cancelSalesOrderStatus( order_vtiger_id )
+	def self.cancelSalesOrder( order_vtiger_id )
 
 		cmd = VtigerHelper.login
 
@@ -126,7 +137,47 @@ class VtigerHelper
 			return nil
 		end
 
+	end
+
+	def self.dispatchSalesOrder( order_vtiger_id )
+
+		cmd = VtigerHelper.login
+
+		order = cmd.retrieve_object(order_vtiger_id)
+		new_status = { 'sostatus' => 'Delivered', 'invoicestatus' => 'Created' }
+		object_map = order.merge new_status
+
+		puts object_map
+
+		resp = cmd.updateobject( object_map )
+
+		success = resp['success']
+
+		if success 
+			return resp['result']
+		else
+			return nil
+		end
 
 	end
+
+	def self.getAllProducts
+
+		cmd = VtigerHelper.login
+
+		length = cmd.query({:query => 'select count(*) from Products;'})['result'][0]['count'].to_i
+
+		num_requests = length / 100 + 1
+		results = []
+
+		num_requests.times do |i|
+			response = cmd.query({:query => "select * from Products limit #{i*100},#{i*100+100};"})['result']
+			results = results + response
+		end
+
+		return results
+
+	end
+
 
 end
