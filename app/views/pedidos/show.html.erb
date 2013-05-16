@@ -1,1 +1,6 @@
-<%= gmaps4rails(@json) %>
+<%= gmaps({
+    "markers"     => { "data" => '[{ "description": "", "title": "start", "lng": '+@startLng+', "lat": '+@startLat+', "picture": "", "width": "", "height": "" } ,{ "description": "", "title": "end", "lng": '+@endLng+', "lat": '+@endLat+', "picture": "", "width": "", "height": "" } ]' } ,
+   "polylines"    => { "data" => "[#{@dest[0]["polylines"]}]"    , "options" => { 'strokeColor' => "#FFFFFF"} }
+
+     })
+ %>
