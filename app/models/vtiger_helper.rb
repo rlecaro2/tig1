@@ -77,13 +77,15 @@ class VtigerHelper
 	def self.createSalesOrder(product_sku, contact_rut, shipto, fecha_string, quantity, unit, price=0)
 
 
-		organization = VtigerHelper.getOrganizationByRut(contact_rut)
 		contact = VtigerHelper.getContactByShipTo(shipto)
 		product = VtigerHelper.getProductBySku(product_sku)
 
 		if(contact_rut.nil?)
 			contact_rut = contact["cf_650"]
 		end
+
+		organization = VtigerHelper.getOrganizationByRut(contact_rut)
+
 
 		subject = "Pedido de " + product["cf_660"]
 		description = "Pedido de " + quantity.to_s + " " +unit.to_s+ " de producto sku: " + product_sku.to_s + "\n" + "Tipo : " + product["cf_657"] + "\n" + "Marca : " + product["cf_658"] + "\n" + "Fundo : " + product["cf_659"] + "\n" + "Descripcion : " + product["cf_660"]
