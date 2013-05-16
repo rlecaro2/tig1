@@ -22,7 +22,7 @@
   <tbody>
     <% @pedidos.each do |pedido| %>
       <tr>
-        <td><%= link_to pedido.id,show_path(pedido) %></td>
+        <td><%= link_to pedido.id,pedido_path(pedido) %></td>
         <td><%= pedido.sku %></td>
         <td><%= pedido.cantidad %></td>
         <td><%= pedido.unidad %></td>
