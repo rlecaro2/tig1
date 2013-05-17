@@ -1,6 +1,12 @@
 class VtigerHelper
 
-	def self.login		
+	def self.login(retry_num)
+
+		if(retry_num < 0)
+			raise 'Vtiger login failed'
+			return nil
+		end
+
 		settings = {
 	  		:username => 'admin',
 			:key => 'AMmccaiTRPbjZvN',
@@ -11,13 +17,11 @@ class VtigerHelper
 		challengeStatus	=	cmd.challenge(settings)
 		loginStatus		=	cmd.login(settings)
 
-		if (challengeStatus and loginStatus)
+		if (loginStatus)
 			return cmd
 		else
-			raise 'Vtiger login failed'
+			return VtigerHelper.login(retry_num - 1)
 		end
-
-		return nil 
 
 	end
 
@@ -25,7 +29,8 @@ class VtigerHelper
 		
 		shipto = shipto.to_s
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
+
 		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto.strip}")
 		status = resp[0]
 		obj_id = resp[1]
@@ -43,7 +48,7 @@ class VtigerHelper
 		
 		sku = sku.to_s
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 		resp = cmd.query_element_by_field('Products','cf_656',"#{sku.strip}")
 		status = resp[0]
 		obj_id = resp[1]
@@ -66,7 +71,7 @@ class VtigerHelper
 			search = "#{rut.strip}"
 		end
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 		resp = cmd.query_element_by_field('Accounts','cf_640', search	)
 		status = resp[0]
 		obj_id = resp[1]
@@ -107,7 +112,7 @@ class VtigerHelper
             'ship_street'=> contact["cf_645"]
 		}
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 		hashv = {}
 
 		resp = cmd.add_object(	object_map , hashv , "SalesOrder" )
@@ -124,7 +129,7 @@ class VtigerHelper
 
 	def self.cancelSalesOrder( order_vtiger_id )
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 
 		order = cmd.retrieve_object(order_vtiger_id)
 		new_status = { 'sostatus' => 'Cancelled', 'invoicestatus' => 'Created' }
@@ -146,7 +151,7 @@ class VtigerHelper
 
 	def self.dispatchSalesOrder( order_vtiger_id )
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 
 		order = cmd.retrieve_object(order_vtiger_id)
 		new_status = { 'sostatus' => 'Delivered', 'invoicestatus' => 'Created' }
@@ -168,7 +173,7 @@ class VtigerHelper
 
 	def self.getAllProducts
 
-		cmd = VtigerHelper.login
+		cmd = VtigerHelper.login(3)
 
 		length = cmd.query({:query => 'select count(*) from Products;'})['result'][0]['count'].to_i
 
