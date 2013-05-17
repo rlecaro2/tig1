@@ -17,7 +17,7 @@ class Pedido < ActiveRecord::Base
 
     #Se ve si el cliente es preferencial
     esPreferencial = false
-    if c["cf_650"] == "34.242.924-1" #este es el rut preferencial y cf_650 es el campo que guarda el rut en vTiger
+    if c["cf_650"].strip == "34.242.924-1" #este es el rut preferencial y cf_650 es el campo que guarda el rut en vTiger
       esPreferencial = true
     end
 
