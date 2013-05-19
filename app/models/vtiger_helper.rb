@@ -29,7 +29,7 @@ class VtigerHelper
 		
 		shipto = shipto.to_s
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 
 		resp = cmd.query_element_by_field('Contacts','cf_641',"#{shipto.strip}")
 		status = resp[0]
@@ -48,7 +48,7 @@ class VtigerHelper
 		
 		sku = sku.to_s
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 		resp = cmd.query_element_by_field('Products','cf_656',"#{sku.strip}")
 		status = resp[0]
 		obj_id = resp[1]
@@ -71,7 +71,7 @@ class VtigerHelper
 			search = "#{rut.strip}"
 		end
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 		resp = cmd.query_element_by_field('Accounts','cf_640', search	)
 		status = resp[0]
 		obj_id = resp[1]
@@ -112,7 +112,7 @@ class VtigerHelper
             'ship_street'=> contact["cf_645"]
 		}
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 		hashv = {}
 
 		resp = cmd.add_object(	object_map , hashv , "SalesOrder" )
@@ -129,7 +129,7 @@ class VtigerHelper
 
 	def self.cancelSalesOrder( order_vtiger_id )
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 
 		order = cmd.retrieve_object(order_vtiger_id)
 		new_status = { 'sostatus' => 'Cancelled', 'invoicestatus' => 'Created' }
@@ -151,7 +151,7 @@ class VtigerHelper
 
 	def self.dispatchSalesOrder( order_vtiger_id )
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 
 		order = cmd.retrieve_object(order_vtiger_id)
 		new_status = { 'sostatus' => 'Delivered', 'invoicestatus' => 'Created' }
@@ -173,7 +173,7 @@ class VtigerHelper
 
 	def self.getAllProducts
 
-		cmd = VtigerHelper.login(3)
+		cmd = VtigerHelper.login(10)
 
 		length = cmd.query({:query => 'select count(*) from Products;'})['result'][0]['count'].to_i
 
