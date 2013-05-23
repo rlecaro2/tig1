@@ -20,18 +20,25 @@ class Pedido < ActiveRecord::Base
       #Se ve si el cliente es preferencial
       esPreferencial = false
       if c["cf_650"].strip == "34.242.924-1" #este es el rut preferencial y cf_650 es el campo que guarda el rut en vTiger
+        QUEUE_LOGGER.info("esPreferencial")
         esPreferencial = true
+      else
+        QUEUE_LOGGER.info("No esPreferencial")
+
       end
+
 
       #Obtencion de las reservas y los stocks
       reservado = Reserva.find_by_sku(p.sku)
       disponible = Bodega.obtener_stock(p.sku,55)
       if esPreferencial
         if p.cantidad <= disponible
+         QUEUE_LOGGER.info("Rebajando cantidad reserva "+reservado.id.to_s)
          reservado.cantidad -= p.cantidad
          if reservado.cantidad < 0
           reservado.cantidad = 0
          end
+         QUEUE_LOGGER.info("Guardando cantidad reserva "+reservado.id.to_s)
          reservado.save
         else
          p.status = "Quiebre por falta de stock"
