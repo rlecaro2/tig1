@@ -9,3 +9,7 @@
   body {
     padding-top: 60px;
   }
+
+  #mymap_canvas img {
+  	max-width: none;
+  }

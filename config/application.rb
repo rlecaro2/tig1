@@ -70,5 +70,13 @@ module Integra1
       :app_id  => "hualpenpedidos1",
       :api_key => "integra1"
     }
+
+    Twitter.configure do |config|
+      config.consumer_key = '8tNp64uktVRvxHaNskYvg'
+      config.consumer_secret = '44bf5nHTi3offF4wCMeiaDJ6xpzYKZNNXFU2ODGs'
+      config.oauth_token = '1397662004-NgGXvp0vcO1SKCXBfgl3uFmri1w1GLOQ97OYe0O'
+      config.oauth_token_secret = 'ZGWWEm0vFVhOJRpISJiC9kSLvxa192umjGQ8YiXbI'
+    end
+
   end
 end

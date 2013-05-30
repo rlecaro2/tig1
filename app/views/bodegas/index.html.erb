@@ -3,15 +3,19 @@
 	<h1>Bodegas</h1>
 </div>
 
-<div>
+<div class="row-fluid">
+	<ul class="thumbnails">
 	<% @objArray.each do |a| %>
-	<div>
-		<h2>Almacen <%= a["almacenId"]%></h2>
+	<li class="thumbnail">
+		<div style="width: 240px; height: 200px;">
+		<h2>Almacén <%= a["almacenId"]%></h2>
 		<p>Capacidad: <%= a["capacidad"] %></p>
-		<p>tipo: <%= a["tipo"] %></p>
-		<p>bodega: <%= a["bodegaId"] %></p>
-		<p>longitud: <%= a["lon"] %></p>
-		<p>latitud: <%= a["lat"] %></p>
-	</div>
+		<p>Tipo: <%= a["tipo"] %></p>
+		<p>Bodega: <%= a["bodegaId"] %></p>
+		<p>Latitud: <%= a["lat"] %></p>
+		<p>Longitud: <%= a["lon"] %></p>
+		</div>
+	</li>
 	<% end %>
+	</ul>
 </div>

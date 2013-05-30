@@ -1,1 +1,43 @@
-<%= gmaps4rails(@json) %>
+<div class="page-header">
+	<h1>Pedido</h1>
+</div>
+
+<div id = "mymap_canvas">
+<%= gmaps({
+    "markers"     => { "data" => '[{ "description": "", "title": "start", "lng": '+@startLng+', "lat": '+@startLat+', "picture": "", "width": "", "height": "" } ,{ "description": "", "title": "end", "lng": '+@endLng+', "lat": '+@endLat+', "picture": "", "width": "", "height": "" } ]' } ,
+   "polylines"    => { "data" => "[#{@dest[0]["polylines"]}]"    , "options" => { 'strokeColor' => "#FFFFFF"} }
+
+     })
+ %>
+
+</div>
+
+</br>
+
+<table class="table table-striped table-bordered">
+  <tbody>
+	  <tr>
+	  	<td><b>Id</b></td>
+        <td><%= @pedido.id %></td>
+      </tr><tr>
+      	<td><b>Sku</b></td>
+        <td><%= @pedido.sku %></td>
+      </tr><tr>
+      	<td><b>Cantidad</b></td>
+        <td><%= @pedido.cantidad %></td>
+      </tr><tr>
+      	<td><b>Unidad</b></td>
+        <td><%= @pedido.unidad %></td>
+      </tr><tr>
+      	<td><b>Rut</b></td>
+        <td><%= @pedido.rut %></td>
+      </tr><tr>
+      	<td><b>Fecha</b></td>
+        <td><%= @pedido.fecha %></td>
+      </tr><tr>
+      	<td><b>Estado</b></td>
+        <td><%= @pedido.status %></td>
+      </tr>
+  </tbody>
+</table>
+

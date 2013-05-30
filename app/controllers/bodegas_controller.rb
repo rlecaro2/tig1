@@ -13,8 +13,12 @@ class BodegasController < ApplicationController
   def reponer  
     sku = params[:sku]    
     almacenId = params[:almacenId]
-    Bodega.reponer(sku, almacenId)
-    #Twittear
+    stockActual = Bodega.reponer(sku, almacenId)
+
+    producto = VtigerHelper.getProductBySku(sku)
+    descr = producto['cf_660']
+
+    Twitter.update("¡ Hemos repuesto " + descr + " !")
 
     head :ok
   end

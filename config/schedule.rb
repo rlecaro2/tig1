@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :output, "../log/whenever_log.log"
 
 every 1.week, :at => '11:00 pm' do
   runner "Reserva.mega_update"
