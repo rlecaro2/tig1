@@ -9,7 +9,7 @@ class VtigerHelper
 
 		cmd = Vtiger::Commands.new()
 		challengeStatus	=	cmd.challenge(settings)
-		loginStatus		=	cmd.login(settings)
+		loginStatus		=	cmd.login(settings)cmd
 
 		if (challengeStatus and loginStatus)
 			return cmd
