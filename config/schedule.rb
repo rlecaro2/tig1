@@ -23,3 +23,7 @@ set :output, "../log/whenever_log.log"
 every 1.week, :at => '11:00 pm' do
   runner "Reserva.mega_update"
 end
+
+every 1.minute do
+  runner "Reserva.mega_update"
+end
