@@ -4,24 +4,35 @@ class Reserva < ActiveRecord::Base
 	
 	def self.mega_update
 		
-		Reserva.destroy_all
-		session = GoogleDrive.login("hualpenpedidos@gmail.com", "tallerdeintegracion")
-		ws = session.spreadsheet_by_key("0AhRzyWALVmYKdHZSTk1hUmpvR1JjRGFjX0ZZQjhwLVE").worksheets[0]
-		
-		i = 2
-		while (true)
-			if (ws[i,1] == "")
-				break
-			end
-			sku = ws[i,1]
-			cantidad = ws[i,2]	
-			r = Reserva.new
-			r.sku = sku
-			r.cantidad = cantidad
-			r.save
+		puts "[#{Time.now}] START UPDATE..."
 
-			i += 1
-		end
+		begin
+			Reserva.destroy_all
+			session = GoogleDrive.login("hualpenpedidos@gmail.com", "tallerdeintegracion")
+			ws = session.spreadsheet_by_key("0AhRzyWALVmYKdHZSTk1hUmpvR1JjRGFjX0ZZQjhwLVE").worksheets[0]
+			
+			i = 2
+			Reserva.transaction do
+				while (true)
+					if (ws[i,1] == "")
+						break
+					end
+					sku = ws[i,1]
+					cantidad = ws[i,2]	
+					r = Reserva.new
+					r.sku = sku
+					r.cantidad = cantidad
+					r.save!
+
+					i += 1
+				end
+			end
+
+		puts "[#{Time.now}]UPDATE SUCCESSFUL"
+
+		rescue Exception => e
+    		puts "[#{Time.now}] #{e.message}"
+   		end
 
 	end
 	
