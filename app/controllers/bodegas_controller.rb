@@ -1,13 +1,28 @@
 class BodegasController < ApplicationController
+
   def index
-    res=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getInfoBodegas&key=45XtPg")
-    @objArray = JSON.parse(res)
-    skus = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getSkuInfo&key=45XtPg")
-    sku = JSON.parse(skus)
-    @sku_id = sku[0]["sku"]
-    resp = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku[0]["sku"].to_s)
-    @stock = JSON.parse(resp)
-    @stock1 = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku[1]["sku"].to_s)    
+    @objArray = Bodega.informacion
+  end
+
+  def consulta
+    @sku = params['sku']
+    stocks = Bodega.obtener_info_stock(@sku)
+    info = Bodega.informacion
+
+    @objArray = info
+    @objArray.each do |o|
+
+      o['cantidad_sku'] = 0
+      stocks.each do |s|
+        if o['almacenId'] == s['almacenId']
+           o['cantidad_sku'] = s['libre']
+        end
+      end
+    end
+
+
+
+
   end
 
   def reponer  

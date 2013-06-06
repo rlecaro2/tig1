@@ -5,7 +5,9 @@ Integra1::Application.routes.draw do
   match 'reponer' => 'bodegas#reponer'
 
   resources :bodegas do
-
+    collection do
+      get 'consulta'
+    end
   end
 
   resources :pedidos do

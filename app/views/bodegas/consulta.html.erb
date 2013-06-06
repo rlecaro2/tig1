@@ -3,17 +3,17 @@
 	<h1>Bodegas</h1>
 </div>
 
+<h3> <%= "Estado Actual SKU: "+@sku %> </h3>
+</br>
+
 <div class="row-fluid">
 	<ul class="thumbnails">
 	<% @objArray.each do |a| %>
 	<li class="thumbnail">
 		<div style="width: 220px; height: 200px;" class="caption">
 		<h3>Almacén <%= a["almacenId"]%></h3>
-		<p>Capacidad: <%= a["capacidad"] %></p>
 		<p>Tipo: <%= a["tipo"] %></p>
-		<p>Bodega: <%= a["bodegaId"] %></p>
-		<p>Latitud: <%= a["lat"] %></p>
-		<p>Longitud: <%= a["lon"] %></p>
+		<p>Cantidad: <%= a['cantidad_sku'] %><p>
 		</div>
 	</li>
 	<% end %>
