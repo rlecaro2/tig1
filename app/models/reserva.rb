@@ -7,12 +7,14 @@ class Reserva < ActiveRecord::Base
 		puts "[#{Time.now}] START UPDATE..."
 
 		begin
-			Reserva.destroy_all
-			session = GoogleDrive.login("hualpenpedidos@gmail.com", "tallerdeintegracion")
-			ws = session.spreadsheet_by_key("0AhRzyWALVmYKdHZSTk1hUmpvR1JjRGFjX0ZZQjhwLVE").worksheets[0]
-			
-			i = 2
 			Reserva.transaction do
+
+				Reserva.destroy_all
+				session = GoogleDrive.login("hualpenpedidos@gmail.com", "tallerdeintegracion")
+				ws = session.spreadsheet_by_key("0AhRzyWALVmYKdHZSTk1hUmpvR1JjRGFjX0ZZQjhwLVE").worksheets[0]
+				
+				i = 2
+			
 				while (true)
 					if (ws[i,1] == "")
 						break
@@ -26,9 +28,10 @@ class Reserva < ActiveRecord::Base
 
 					i += 1
 				end
+
 			end
 
-		puts "[#{Time.now}]UPDATE SUCCESSFUL"
+		puts "[#{Time.now}] UPDATE SUCCESSFUL"
 
 		rescue Exception => e
     		puts "[#{Time.now}] #{e.message}"
