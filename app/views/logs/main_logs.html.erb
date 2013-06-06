@@ -1,0 +1,15 @@
+
+<div class="page-header">
+  <h1>Logger</h1>
+</div>
+
+<%= link_to 'Stop', 'javascript:void("stop")', :id => :stop %>
+<%= link_to 'Start', 'javascript:void("start")', :id => :start, :style => 'display:none' %>
+<br />
+<br />
+
+<pre id='logs' style="height:534px; overflow:auto;">
+  <%= @lines.join("\n") %>
+</pre>
+
+<br />

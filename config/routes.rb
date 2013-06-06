@@ -3,6 +3,7 @@ Integra1::Application.routes.draw do
   post 'email' => 'emails#create'
   root :to =>'application#index'
   match 'reponer' => 'bodegas#reponer'
+  get 'main_logs' => "logs#main_logs"
 
   resources :bodegas do
     collection do
