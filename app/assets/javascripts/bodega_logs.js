@@ -2,13 +2,13 @@ $(function(){
   var start = $('#start');
   var stop = $('#stop');
 
-  var milliseconds = 1024 * 3;
+  var milliseconds = 1024 * 3 ;
   var id = null;
 
   var update = function(){
     id = setInterval(function(){
 
-      $.ajax('whenever_logs.json?silence=logger', {
+      $.ajax('bodega_logs.json?silence=logger', {
         type: 'GET',
         success: function(data) {
           var lines = data

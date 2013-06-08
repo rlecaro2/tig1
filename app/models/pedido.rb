@@ -7,6 +7,7 @@ class Pedido < ActiveRecord::Base
 
     begin
 
+      QUEUE_LOGGER.info("Processing pedido "+id.to_s)
       p = Pedido.find_by_id(id)
       p.status = "Procesando"
       p.save
