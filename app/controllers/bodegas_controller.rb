@@ -27,7 +27,8 @@ class BodegasController < ApplicationController
 
   def reponer  
     sku = params[:sku]    
-    almacenId = params[:almacenId]
+    almacenId = params[:almacendId]
+
     stockActual = Bodega.reponer(sku, almacenId)
 
     producto = VtigerHelper.getProductBySku(sku)
