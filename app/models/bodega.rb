@@ -24,7 +24,7 @@ class Bodega
 
 	def self.obtener_info_stock (sku)
 		begin
-			res = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku.to_s)
+			res = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku.to_s.strip)
 			objArray = JSON.parse(res)
 			#objArray[0]["sku"] primer sku
 			return objArray
@@ -37,7 +37,7 @@ class Bodega
 	def self.mover(almacen_desde,almacen_hasta,sku, units)
 		BODEGA_LOGGER.info("Traspasando #{units.to_s} unidades de sku #{sku.to_s} desde #{almacen_desde.to_s} a #{almacen_hasta.to_s} ...")
 		begin
-			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params="+almacen_desde.to_s+","+almacen_hasta.to_s+","+sku.to_s+","+units.to_i.to_s)
+			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params="+almacen_desde.to_s.strip+","+almacen_hasta.to_s.strip+","+sku.to_s.strip+","+units.to_i.to_s)
 		rescue Exception => e
 			#HTTParty::Error => e
 			BODEGA_LOGGER.info("Error al traspasar #{e.message}")
@@ -51,7 +51,7 @@ class Bodega
 	def self.preparar_despacho(sku, units)	
 		BODEGA_LOGGER.info("Traspasando #{units.to_s} unidades de sku #{sku.to_s} desde 55 a 102 ...")	
 		begin
-			resp = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params=55,102,"+sku.to_s+","+units.to_i.to_s)
+			resp = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params=55,102,"+sku.to_s.strip+","+units.to_i.to_s)
 		rescue Exception => e
 			#HTTParty::Error => e
 			BODEGA_LOGGER.info("Error al traspasar #{e.message}")
@@ -65,7 +65,7 @@ class Bodega
 
 	def self.obtener_stock(sku, almacen)		
 		begin
-			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku.to_s)			
+			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=getStock&key=45XtPg&params="+sku.to_s.strip)			
 		rescue
 			#HTTParty::Error => e
 			return false
@@ -84,7 +84,7 @@ class Bodega
 	def self.despachar(sku,cantidad)
 		BODEGA_LOGGER.info("Despachando #{cantidad.to_i.to_s} unidades de sku #{sku.to_s} ...")	
 		begin
-			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=despacharStock&key=45XtPg&params=102,"+sku.to_s+","+cantidad.to_i.to_s)
+			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=despacharStock&key=45XtPg&params=102,"+sku.to_s.strip+","+cantidad.to_i.to_s)
 		rescue Exception => e
 			BODEGA_LOGGER.info("Error al despachar #{e.message}")
    	        BODEGA_LOGGER.info(e.backtrace.join("\n"))
