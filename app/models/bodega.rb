@@ -80,7 +80,7 @@ class Bodega
 	end
 
 	def self.despachar(sku,cantidad)
-		BODEGA_LOGGER.info("Despachando #{units.to_s} unidades de sku #{sku.to_s} ...")	
+		BODEGA_LOGGER.info("Despachando #{cantidad.to_s} unidades de sku #{sku.to_s} ...")	
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=despacharStock&key=45XtPg&params=102,"+sku.to_s+","+cantidad.to_s)
 		rescue
