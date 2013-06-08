@@ -38,9 +38,10 @@ class Bodega
 		BODEGA_LOGGER.info("Traspasando #{units.to_s} unidades de sku #{sku.to_s} desde #{almacen_desde.to_s} a #{almacen_hasta.to_s} ...")
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params="+almacen_desde.to_s+","+almacen_hasta.to_s+","+sku.to_s+","+units.to_i.to_s)
-		rescue 
+		rescue Exception => e
 			#HTTParty::Error => e
-			BODEGA_LOGGER.info("Error al traspasar")
+			BODEGA_LOGGER.info("Error al traspasar #{e.message}")
+   	        BODEGA_LOGGER.info(e.backtrace.join("\n"))
 			return false
 		end
 		BODEGA_LOGGER.info("Traspaso exitoso")
@@ -51,9 +52,10 @@ class Bodega
 		BODEGA_LOGGER.info("Traspasando #{units.to_s} unidades de sku #{sku.to_s} desde 55 a 102 ...")	
 		begin
 			resp = HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=moverStock&key=45XtPg&params=55,102,"+sku.to_s+","+units.to_i.to_s)
-		rescue
+		rescue Exception => e
 			#HTTParty::Error => e
-			BODEGA_LOGGER.info("Error al traspasar")			
+			BODEGA_LOGGER.info("Error al traspasar #{e.message}")
+   	        BODEGA_LOGGER.info(e.backtrace.join("\n"))
 			return false
 		end
 		BODEGA_LOGGER.info("Traspaso exitoso")
@@ -83,8 +85,9 @@ class Bodega
 		BODEGA_LOGGER.info("Despachando #{cantidad.to_i.to_s} unidades de sku #{sku.to_s} ...")	
 		begin
 			resp=HTTParty.get("http://iic3103.ing.puc.cl/webservice/integra1/?function=despacharStock&key=45XtPg&params=102,"+sku.to_s+","+cantidad.to_i.to_s)
-		rescue
-			BODEGA_LOGGER.info("Error al despachar")			
+		rescue Exception => e
+			BODEGA_LOGGER.info("Error al despachar #{e.message}")
+   	        BODEGA_LOGGER.info(e.backtrace.join("\n"))
 			return false
 		end
 		BODEGA_LOGGER.indo("Despacho exitoso")
