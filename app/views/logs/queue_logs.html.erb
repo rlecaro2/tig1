@@ -1,15 +1,14 @@
 <% content_for :scripts do %>
-  <%= javascript_include_tag "main_logs.js" %>
+  <%= javascript_include_tag "queue_logs.js" %>
 <% end %>
 
 <div class="page-header">
   <h1>Logger</h1>
-
 </div>
 
 <ul class="nav nav-pills">
-  <li class="active"><a href= <%= main_logs_path %> > Main</a></li>
-  <li><a href= <%= queue_logs_path %> >Queue</a></li>
+  <li><a href= <%= main_logs_path %> > Main</a></li>
+  <li  class="active" ><a href= <%= queue_logs_path %> >Queue</a></li>
   <li><a href= <%= whenever_logs_path %> >Whenever</a></li>
 </ul>
 

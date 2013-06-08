@@ -4,6 +4,8 @@ Integra1::Application.routes.draw do
   root :to =>'application#index'
   match 'reponer' => 'bodegas#reponer'
   get 'main_logs' => "logs#main_logs"
+  get 'queue_logs' => "logs#queue_logs"
+  get 'whenever_logs' => "logs#whenever_logs"
 
   resources :bodegas do
     collection do
