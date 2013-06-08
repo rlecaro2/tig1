@@ -94,7 +94,7 @@ class Bodega
 	def self.reponer(sku, almacen)
 		BODEGA_LOGGER.info("Reponiendo sku #{sku.to_s} desde #{almacen.to_s}")	
 		stock = Bodega.obtener_stock(sku, almacen)
-		Bodega.mover(almacen,55,sku,stock)
+		Bodega.mover(almacen,55,sku,stock.to_i)
 		return stock
 	end
 		
