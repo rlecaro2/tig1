@@ -90,7 +90,7 @@ class Bodega
    	        BODEGA_LOGGER.info(e.backtrace.join("\n"))
 			return false
 		end
-		BODEGA_LOGGER.indo("Despacho exitoso")
+		BODEGA_LOGGER.info("Despacho exitoso")
 		return true
 	end
 
