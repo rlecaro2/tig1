@@ -3,6 +3,16 @@
 	<h1>Bodegas</h1>
 </div>
 
+<div class="span9">
+
+<%=form_tag(consulta_bodegas_path, :method => :get, :class => 'form-search' )%>
+  <input type="text" name="sku" class="input-medium search-query" placeholder="SKU">
+  <button type="submit" class="btn">Buscar</button>
+</form>
+
+</div>
+
+
 <h3> <%= "Estado Actual SKU: "+@sku %> </h3>
 </br>
 

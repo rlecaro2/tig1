@@ -10,19 +10,20 @@ class BodegasController < ApplicationController
     info = Bodega.informacion
 
     @objArray = info
-    @objArray.each do |o|
 
-      o['cantidad_sku'] = 0
-      stocks.each do |s|
-        if o['almacenId'] == s['almacenId']
-           o['cantidad_sku'] = s['libre']
+    begin
+      @objArray.each do |o|
+        o['cantidad_sku'] = 0
+        stocks.each do |s|
+          if o['almacenId'] == s['almacenId']
+             o['cantidad_sku'] = s['libre']
+          end
         end
       end
+    rescue Exception => e
+      @objArray = []
     end
-
-
-
-
+    
   end
 
   def reponer  
