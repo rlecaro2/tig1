@@ -2,7 +2,7 @@ $(function(){
   var start = $('#start');
   var stop = $('#stop');
 
-  var milliseconds = 1024;
+  var milliseconds = 1024 * 3;
   var id = null;
 
   var update = function(){
