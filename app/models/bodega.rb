@@ -74,7 +74,7 @@ class Bodega
 		stock = JSON.parse(resp)
 		b=0
 		stock.each do|a|
-			if(a["almacenId"]==almacen)
+			if(a["almacenId"].to_i==almacen.to_i)
 				b = a["libre"]
 			end
 		end
