@@ -113,6 +113,22 @@ class Precio
 
 	end
 
+	def self.find_precio_activo(sku)
+		precios = Precio.find_all_by_sku(sku)
+		actual = nil
+		precios.each do |p|
+			a = p.desde
+			b = p.hasta
+
+			if (a .. b).cover?(DateTime.now)
+				actual = p
+				break
+			end
+		end
+
+		return actual;
+	end
+
 	def self.find_by_precio (pr)
 		begin
 			string = J_HELPER.find_by("Precio 1",pr)

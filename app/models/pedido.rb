@@ -71,7 +71,10 @@ class Pedido < ActiveRecord::Base
 
         t = Transaccion.new
         t.pedido = p
+        precio = Precio.find_precio_activo(p.sku.to_i).precio
+        t.monto = precio.to_d * p.cantidad.to_d
         t.save
+        QUEUE_LOGGER.info('Transaccion por ' +t.monto.to_s )
 
         VtigerHelper.dispatchSalesOrder(vtiger_order_id)
       end 
