@@ -74,7 +74,7 @@ class Pedido < ActiveRecord::Base
         precio = Precio.find_precio_activo(p.sku.to_i).precio
         t.monto = precio.to_d * p.cantidad.to_d
         infoSkus = Bodega.informacion_sku
-        infoSku = infoSkus.select{|b| b["sku"] == pedido.sku}
+        infoSku = infoSkus.select{|b| b["sku"] == p.sku}
         t.costos =   infoSku.costo.to_d * 
 
         t.save
