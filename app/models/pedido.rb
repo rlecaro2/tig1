@@ -80,6 +80,9 @@ class Pedido < ActiveRecord::Base
         t.save
         QUEUE_LOGGER.info('Transaccion por ' +t.monto.to_s )
 
+        Contabilidad.earning(t.monto.to_i)
+        Contabilidad.cost(t.costos.to_i)
+
         VtigerHelper.dispatchSalesOrder(vtiger_order_id)
       end 
 
