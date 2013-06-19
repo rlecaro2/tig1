@@ -8,4 +8,6 @@ Integra1::Application.configure do
 	  :app_id  => "hualpenpedidos1",
 	  :api_key => "integra1"
 	}
+	
+	
 end

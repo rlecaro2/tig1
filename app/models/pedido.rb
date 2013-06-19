@@ -7,6 +7,7 @@ class Pedido < ActiveRecord::Base
 
     begin
 
+      QUEUE_LOGGER.info("Processing pedido "+id.to_s)
       p = Pedido.find_by_id(id)
       p.status = "Procesando"
       p.save
@@ -70,7 +71,14 @@ class Pedido < ActiveRecord::Base
 
         t = Transaccion.new
         t.pedido = p
+        precio = Precio.find_precio_activo(p.sku.to_i).precio
+        t.monto = precio.to_d * p.cantidad.to_d
+        infoSkus = Bodega.informacion_sku
+        infoSku = infoSkus.select{|b| b["sku"].to_s == p.sku.strip}
+        t.costos =   infoSku[0]["costo"].to_d * p.cantidad.to_d
+
         t.save
+        QUEUE_LOGGER.info('Transaccion por ' +t.monto.to_s )
 
         VtigerHelper.dispatchSalesOrder(vtiger_order_id)
       end 

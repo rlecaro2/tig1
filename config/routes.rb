@@ -3,9 +3,15 @@ Integra1::Application.routes.draw do
   post 'email' => 'emails#create'
   root :to =>'application#index'
   match 'reponer' => 'bodegas#reponer'
+  get 'main_logs' => "logs#main_logs"
+  get 'queue_logs' => "logs#queue_logs"
+  get 'whenever_logs' => "logs#whenever_logs"
+  get 'bodega_logs' => "logs#bodega_logs"
 
   resources :bodegas do
-
+    collection do
+      get 'consulta'
+    end
   end
 
   resources :pedidos do

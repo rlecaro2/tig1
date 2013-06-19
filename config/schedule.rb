@@ -18,8 +18,12 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-set :output, "../log/whenever_log.log"
+set :output, "log/whenever.log"
 
-every 1.week, :at => '11:00 pm' do
+every :friday, :at => "11am" do
   runner "Reserva.mega_update"
+end
+
+every :day, :at => "11:55pm" do
+  runner "Reporte.consolidar"
 end

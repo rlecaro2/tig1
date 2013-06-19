@@ -1,0 +1,26 @@
+<% content_for :scripts do %>
+  <%= javascript_include_tag "bodega_logs.js" %>
+<% end %>
+
+<div class="page-header">
+  <h1>Logger</h1>
+
+</div>
+
+<ul class="nav nav-pills">
+  <li><a href= <%= main_logs_path %> > Main</a></li>
+  <li><a href= <%= queue_logs_path %> >Queue</a></li>
+  <li><a href= <%= whenever_logs_path %> >Whenever</a></li>
+  <li class="active"><a href= <%= bodega_logs_path %> >Bodega</a></li>
+</ul>
+
+<%= link_to 'Stop', 'javascript:void("stop")', :id => :stop %>
+<%= link_to 'Start', 'javascript:void("start")', :id => :start, :style => 'display:none' %>
+<br />
+<br />
+
+<pre id='logs' style="height:534px; overflow:auto;">
+  <%= @lines.join("\n") %>
+</pre>
+
+<br />
