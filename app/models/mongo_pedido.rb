@@ -17,13 +17,10 @@ class MongoPedido
     
     ingresos = 0
     costos = 0
-    if pedido.status.casecmp("despachado") == 0
+    if pedido.status.casecmp("Despachado") == 0
       t = pedido.Transaccion
       ingresos = t.monto
-      infoSku = @infoSkus.select{|b| b["sku"] == pedido.sku}
-      if not infoSku.empty?
-        costos = infoSku.costo
-      end
+      costos = t.costos
     end
 
     mongo = MongoPedido.new(

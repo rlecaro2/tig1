@@ -73,6 +73,10 @@ class Pedido < ActiveRecord::Base
         t.pedido = p
         precio = Precio.find_precio_activo(p.sku.to_i).precio
         t.monto = precio.to_d * p.cantidad.to_d
+        infoSkus = Bodega.informacion_sku
+        infoSku = infoSkus.select{|b| b["sku"] == pedido.sku}
+        t.costos =   infoSku.costo.to_d * 
+
         t.save
         QUEUE_LOGGER.info('Transaccion por ' +t.monto.to_s )
 

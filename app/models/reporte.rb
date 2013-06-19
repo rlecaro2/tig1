@@ -10,10 +10,7 @@ class Reporte
   embeds_many :mongo_pedidos
 
   def self.consolidar
-    @infoSkus = Bodega.informacion_sku
-
     reporte = Reporte.new()
-    reporte.save
     pedidos = Pedido.where(fecha: Date.today).where(["status != 'recibido' OR status != 'procesando'"])
     pedidos.each do |pedido|
       MongoPedido.createFrom(pedido, reporte)
