@@ -24,6 +24,6 @@ every :friday, :at => "11am" do
   runner "Reserva.mega_update"
 end
 
-every :day, :at => "6pm" do
-  runner "Reporte.reportar"
+every :day, :at => "11:55pm" do
+  runner "Reporte.consolidar"
 end
