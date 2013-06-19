@@ -23,3 +23,7 @@ set :output, "log/whenever.log"
 every :friday, :at => "11am" do
   runner "Reserva.mega_update"
 end
+
+every :day, :at => "6pm" do
+  runner "Reporte.reportar"
+end
