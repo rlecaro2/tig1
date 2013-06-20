@@ -69,15 +69,17 @@ class Pedido < ActiveRecord::Base
       long = Direccion.find_by_shipto(p.direccion_id).longitude.to_d
       w = Metwit::Weather.in_location(lat,long)
       temp = w[0].weather["measured"]["temperature"]:to_d-273.15
-      buenClima = false
-      if temp<=maxTemp
-        if temp>=minTemp
-          buenClima = true
-        end
+      buenClima = true
+      if temp>maxTemp
+        buenClima=false
       end
-
+      if temp<minTemp
+        buenClima=false
+      end
       if not buenClima
         Bodega.mover(102,55,p.sku,p.cantidad)
+        p.status = "Quiebre por clima"
+        p.save
       else
         Bodega.despachar(p.sku,p.cantidad)
         p.status = "Despachado"
