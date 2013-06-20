@@ -68,7 +68,7 @@ class Pedido < ActiveRecord::Base
       lat = Direccion.find_by_shipto(p.direccion_id).latitude.to_d
       long = Direccion.find_by_shipto(p.direccion_id).longitude.to_d
       w = Metwit::Weather.in_location(lat,long)
-      temp = w[0].weather["measured"]["temperature"]:to_d-273.15
+      temp = w[0].weather["measured"]["temperature"].to_d-273.15
       buenClima = true
       if temp>maxTemp
         buenClima=false
