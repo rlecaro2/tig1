@@ -61,9 +61,25 @@ class Pedido < ActiveRecord::Base
       #Acá habría que revisar si el clima permite el despacho
       #Si no se puede despachar hay que reversar la reserva
       #También hay que mover el stock de bodega
+      infoSkus = Bodega.informacion_sku
+      infoSku = infoSkus.select{|b| b["sku"].to_s == p.sku.strip}
+      maxTemp = infoSku[0]["max_temp"].to_d
+      minTemp = infoSku[0]["min_temp"].to_d
+      lat = Direccion.find_by_shipto(p.direccion_id).latitude.to_d
+      long = Direccion.find_by_shipto(p.direccion_id).longitude.to_d
+      w = Metwit::Weather.in_location(lat,long)
+      temp = w[0].weather["measured"]["temperature"].to_d-273.15
       buenClima = true
+      if temp>maxTemp
+        buenClima=false
+      end
+      if temp<minTemp
+        buenClima=false
+      end
       if not buenClima
-        #Bodegas.traspaso(p.sku,p.cantidad,"despacho","disponible")
+        Bodega.mover(102,55,p.sku,p.cantidad)
+        p.status = "Quiebre por clima"
+        p.save
       else
         Bodega.despachar(p.sku,p.cantidad)
         p.status = "Despachado"
@@ -73,12 +89,13 @@ class Pedido < ActiveRecord::Base
         t.pedido = p
         precio = Precio.find_precio_activo(p.sku.to_i).precio
         t.monto = precio.to_d * p.cantidad.to_d
-        infoSkus = Bodega.informacion_sku
-        infoSku = infoSkus.select{|b| b["sku"].to_s == p.sku.strip}
         t.costos =   infoSku[0]["costo"].to_d * p.cantidad.to_d
 
         t.save
         QUEUE_LOGGER.info('Transaccion por ' +t.monto.to_s )
+
+        Contabilidad.earning(t.monto.to_i)
+        Contabilidad.cost(t.costos.to_i)
 
         VtigerHelper.dispatchSalesOrder(vtiger_order_id)
       end 

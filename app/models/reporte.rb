@@ -1,6 +1,7 @@
 class Reporte
   include Mongoid::Document
 
+  field :fecha, type: Date
   field :quiebres, type: Integer
   field :despachos, type: Integer
   field :costos, type: Float
@@ -10,7 +11,9 @@ class Reporte
   embeds_many :mongo_pedidos
 
   def self.consolidar
-    reporte = Reporte.new()
+
+    reporte = Reporte.new(fecha: Date.today)
+
     pedidos = Pedido.where(fecha: Date.today).where(["status != 'recibido' OR status != 'procesando'"])
     pedidos.each do |pedido|
       MongoPedido.createFrom(pedido, reporte)

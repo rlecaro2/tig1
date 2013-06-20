@@ -16,7 +16,12 @@ Integra1::Application.routes.draw do
 
   resources :pedidos do
     get 'show_map'
+    collection do
+      get 'tiempo'
+    end
   end
+
+  match 'dashboard' => "dashboards#index"
 
   resources :reservas do
   
