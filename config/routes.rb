@@ -18,6 +18,8 @@ Integra1::Application.routes.draw do
     get 'show_map'
   end
 
+  match 'dashboard' => "dashboards#index"
+
   resources :reservas do
   
   end
