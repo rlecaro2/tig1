@@ -13,6 +13,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:ruta) %></th>
       <th><%= model_class.human_attribute_name(:monto) %></th>
+      <th><%= model_class.human_attribute_name(:costos) %></th>
       <th><%= model_class.human_attribute_name(:pedido_id) %></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= transaccion.id %></td>
         <td><%= link_to "Ver ruta", pedido_path(transaccion.pedido)%></td>
         <td><%= transaccion.monto %></td>
+        <td><%= transaccion.costos %></td>
         <td><%= transaccion.pedido_id %></td>
       </tr>
     <% end %>

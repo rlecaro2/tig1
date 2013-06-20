@@ -66,9 +66,14 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metwit (0.0.5)
+      activesupport
+      httparty
+      rgeo-geojson
     mime-types (1.23)
     mongoid (3.1.3)
       activemodel (~> 3.2)
@@ -125,8 +130,12 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     remail (0.0.3)
       activeresource
+    rgeo (0.3.20)
+    rgeo-geojson (0.2.3)
+      rgeo (>= 0.3.7)
     rjb (1.4.6)
     sass (3.2.9)
     sass-rails (3.2.6)
@@ -139,6 +148,9 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.18.1)
     tilt (1.4.1)
     treetop (1.4.12)
@@ -174,6 +186,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   kaminari
+  metwit
   mongoid
   mysql2
   oauth-plugin
@@ -182,6 +195,7 @@ DEPENDENCIES
   remail
   rjb
   sass-rails (~> 3.2.3)
+  therubyracer
   twitter
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

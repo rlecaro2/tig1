@@ -11,7 +11,6 @@ class Reporte
   embeds_many :mongo_pedidos
 
   def self.consolidar
-    @infoSkus = Bodega.informacion_sku
 
     reporte = Reporte.new(fecha: Date.today)
 

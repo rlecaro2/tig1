@@ -26,4 +26,8 @@ class PedidosController < ApplicationController
   	end
   end
 
+  def tiempo
+
+  end
+
 end
