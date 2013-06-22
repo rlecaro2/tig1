@@ -22,8 +22,8 @@ class Reporte
     reporte.despachos = reporte.mongo_pedidos.where(status: "despachado").count
     reporte.quiebres = reporte.mongo_pedidos.count - reporte.despachos
 
-    reporte.costos = reporte.mongo_pedidos.sum(:costos)
-    reporte.ingresos = reporte.mongo_pedidos.sum(:ingresos)
+    reporte.costos = reporte.mongo_pedidos.sum('costos')
+    reporte.ingresos = reporte.mongo_pedidos.sum('ingresos')
 
     reporte.save
   end

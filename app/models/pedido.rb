@@ -80,6 +80,7 @@ class Pedido < ActiveRecord::Base
         Bodega.mover(102,55,p.sku,p.cantidad)
         p.status = "Quiebre por clima"
         p.save
+        VtigerHelper.cancelSalesOrder(vtiger_order_id)
       else
         Bodega.despachar(p.sku,p.cantidad)
         p.status = "Despachado"
