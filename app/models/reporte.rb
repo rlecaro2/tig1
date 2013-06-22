@@ -22,8 +22,13 @@ class Reporte
     reporte.despachos = reporte.mongo_pedidos.where(status: "despachado").count
     reporte.quiebres = reporte.mongo_pedidos.count - reporte.despachos
 
-    reporte.costos = reporte.mongo_pedidos.sum('costos')
-    reporte.ingresos = reporte.mongo_pedidos.sum('ingresos')
+    reporte.costos = 0
+    reporte.ingresos = 0
+
+    reporte.mongo_pedidos.each do |mp|
+      reporte.costos += mp.costos
+      reporte.ingresos += mp.ingresos
+    end
 
     reporte.save
   end

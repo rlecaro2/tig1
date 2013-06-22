@@ -36,6 +36,7 @@ class MongoPedido
       hora_llegada: pedido.hora_llegada,
       reporte: reporte
     )
+    
     mongo.save
     return mongo
   end
