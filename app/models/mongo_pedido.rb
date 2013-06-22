@@ -18,7 +18,7 @@ class MongoPedido
     ingresos = 0
     costos = 0
     if pedido.status.casecmp("Despachado") == 0
-      t = pedido.Transaccion
+      t = pedido.transaccion
       ingresos = t.monto
       costos = t.costos
     end
