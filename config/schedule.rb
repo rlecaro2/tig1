@@ -25,5 +25,5 @@ every :friday, :at => "11am" do
 end
 
 every :day, :at => "11:55pm" do
-  runner "Reporte.consolidar"
+  runner "Reporte.consolidar(Date.today)"
 end

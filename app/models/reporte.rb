@@ -10,11 +10,11 @@ class Reporte
   
   embeds_many :mongo_pedidos
 
-  def self.consolidar
+  def self.consolidar(fecha)
 
-    reporte = Reporte.new(fecha: Date.today)
+    reporte = Reporte.new(fecha: fecha)
 
-    pedidos = Pedido.where(fecha: Date.today).where(["status != 'recibido' OR status != 'procesando'"])
+    pedidos = Pedido.where(fecha: fecha).where(["status != 'recibido' OR status != 'procesando'"])
     pedidos.each do |pedido|
       MongoPedido.createFrom(pedido, reporte)
     end
