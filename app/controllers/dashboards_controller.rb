@@ -14,11 +14,10 @@ class DashboardsController < ApplicationController
   def ProcessInfo(reportes)
     @ingresos_costos = []
     @despachos_quiebres = []
-    @quiebres = []
     reportes.each do |reporte|
-      @ingresos_costos << [reporte.fecha, reporte.ingresos, reporte.costos]
+      @ingresos_costos << [reporte.fecha.to_s, reporte.ingresos.to_s, reporte.costos.to_s]
 
-      @despachos_quiebres << [reporte.fecha, reporte.despachos, reporte.quiebres]
+      @despachos_quiebres << [reporte.fecha.to_s, reporte.despachos.to_s, reporte.quiebres.to_s]
     end
 
   end

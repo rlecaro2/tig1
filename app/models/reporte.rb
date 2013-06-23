@@ -19,7 +19,7 @@ class Reporte
       MongoPedido.createFrom(pedido, reporte)
     end
 
-    reporte.despachos = reporte.mongo_pedidos.where(status: "despachado").count
+    reporte.despachos = reporte.mongo_pedidos.select{|a| a.status=='Despachado'}.count
     reporte.quiebres = reporte.mongo_pedidos.count - reporte.despachos
 
     reporte.costos = 0
