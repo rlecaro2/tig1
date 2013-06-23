@@ -1,10 +1,10 @@
 <html>
   <head>
-<%= @despachos_quiebres.each do |tupla| %>
+<% @despachos_quiebres.each do |tupla| %>
 <%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
 <%end%>
 
-<%= @ingresos_costos.each do |tupla| %>
+<% @ingresos_costos.each do |tupla| %>
 <%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
 <%end%>
     <!--Load the AJAX API-->

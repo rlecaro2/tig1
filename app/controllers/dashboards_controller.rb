@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
 
   def index
     reportes = Reporte.all.to_a
-    ProcessInfo(reportes)
+    self.ProcessInfo(reportes)
 
 
 
