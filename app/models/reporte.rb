@@ -26,8 +26,8 @@ class Reporte
     reporte.ingresos = 0
 
     reporte.mongo_pedidos.each do |mp|
-      reporte.costos += mp.costos
-      reporte.ingresos += mp.ingresos
+      reporte.costos += mp.costos.to_f
+      reporte.ingresos += mp.ingresos.to_f
     end
 
     reporte.save
