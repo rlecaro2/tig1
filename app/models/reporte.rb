@@ -10,20 +10,25 @@ class Reporte
   
   embeds_many :mongo_pedidos
 
-  def self.consolidar
+  def self.consolidar(fecha)
 
-    reporte = Reporte.new(fecha: Date.today)
+    reporte = Reporte.new(fecha: fecha)
 
-    pedidos = Pedido.where(fecha: Date.today).where(["status != 'recibido' OR status != 'procesando'"])
+    pedidos = Pedido.where(fecha: fecha).where(["status != 'recibido' OR status != 'procesando'"])
     pedidos.each do |pedido|
       MongoPedido.createFrom(pedido, reporte)
     end
 
-    reporte.despachos = reporte.mongo_pedidos.where(status: "despachado").count
+    reporte.despachos = reporte.mongo_pedidos.select{|a| a.status=='Despachado'}.count
     reporte.quiebres = reporte.mongo_pedidos.count - reporte.despachos
 
-    reporte.costos = reporte.mongo_pedidos.sum(:costos)
-    reporte.ingresos = reporte.mongo_pedidos.sum(:ingresos)
+    reporte.costos = 0
+    reporte.ingresos = 0
+
+    reporte.mongo_pedidos.each do |mp|
+      reporte.costos += mp.costos.to_f
+      reporte.ingresos += mp.ingresos.to_f
+    end
 
     reporte.save
   end
