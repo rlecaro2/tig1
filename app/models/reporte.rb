@@ -33,4 +33,13 @@ class Reporte
     reporte.save
   end
 
+  def self.ingresos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.ingresos
+    end
+  end
+
 end

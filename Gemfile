@@ -55,6 +55,8 @@ gem 'metwit'
 
 gem 'rjb'
 
+gem 'highcharts-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
