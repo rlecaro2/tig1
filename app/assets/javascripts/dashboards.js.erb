@@ -18,11 +18,15 @@
 		series: [
 			{
 				name: 'Ingresos',
-				data: <%= (3.weeks.ago.to_date..Date.today).map {|date| Reporte.ingresos_on(date).to_f }%>
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.yesterday).map {|date| Reporte.ingresos_on(date).to_f }.inspect%>
 			},
 			{
 				name: 'Costos',
-				data: <%= (3.weeks.ago.to_date..Date.today).map {|date| Reporte.costos_on(date).to_f }%>
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.yesterday).map {|date| Reporte.costos_on(date).to_f }.inspect%>
 			}
 		]
 
