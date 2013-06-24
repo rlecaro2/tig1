@@ -51,4 +51,22 @@ class Reporte
     end
   end
 
+  def self.despachos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.despachos
+    end
+  end
+
+  def self.quiebres_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.quiebres
+    end
+  end
+
 end
