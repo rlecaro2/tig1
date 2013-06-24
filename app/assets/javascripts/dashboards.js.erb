@@ -15,11 +15,16 @@
 		  text: "CLP $"
 		}
 		},
-		series: [{
-			pointsInterval: <%=1.day %>,
-			pointStart: <%= 3.weeks.ago.to_i * 1000 %>,
-			data: <%= (3.weeks.ago.to_date..Date.today).map {|date| Reporte.ingresos_on(date).to_f }%>
-		}]
+		series: [
+			{
+				name: 'Ingresos',
+				data: <%= (3.weeks.ago.to_date..Date.today).map {|date| Reporte.ingresos_on(date).to_f }%>
+			},
+			{
+				name: 'Costos',
+				data: <%= (3.weeks.ago.to_date..Date.today).map {|date| Reporte.costos_on(date).to_f }%>
+			}
+		]
 
     });
   });
