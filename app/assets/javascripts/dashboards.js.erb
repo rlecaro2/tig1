@@ -136,11 +136,17 @@
 });
 
 function tab1(){
-	$("#pedidos2").fadeOut(0);
+	$("#productos").fadeOut(0);
 	$("#pedidos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', 'active');
+	$("#tab2_productos").attr('class', '');
 }
 
  function tab2(){
 	$("#pedidos").fadeOut(0);
-	$("#pedidos2").fadeIn(0);
+	$("#productos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', '');
+	$("#tab2_productos").attr('class', 'active');
 }
