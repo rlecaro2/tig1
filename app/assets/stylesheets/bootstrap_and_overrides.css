@@ -13,3 +13,7 @@
   #mymap_canvas img {
   	max-width: none;
   }
+
+  .rafa {
+    display: none;
+  }
