@@ -6,9 +6,9 @@ class DashboardsController < ApplicationController
 
     @ingresos_costos = []
     @despachos_quiebres = []
-    reportes.each do |reporte|
-      @ingresos_costos << [reporte.fecha.to_s, reporte.ingresos.to_s, reporte.costos.to_s]
-      @despachos_quiebres << [reporte.fecha.to_s, reporte.despachos.to_s, reporte.quiebres.to_s]
+    reportes.each do |r|
+      @ingresos_costos << [r.fecha.to_s, r.ingresos.to_s, r.costos.to_s]
+      @despachos_quiebres << [r.fecha.to_s, r.despachos.to_s, r.quiebres.to_s]
     end
 
     respond_to do |format|
