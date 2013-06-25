@@ -13,6 +13,10 @@ gem "remail"
 
 gem 'gmaps4rails'
 
+gem 'axlsx'
+
+gem 'axlsx_rails'
+
 gem "httparty"
 
 gem 'google_drive'
@@ -54,6 +58,8 @@ gem 'twitter'
 gem 'metwit'
 
 gem 'rjb'
+
+gem 'highcharts-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

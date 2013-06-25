@@ -1,3 +1,4 @@
+# encoding: utf-8
 class BodegasController < ApplicationController
 
   def index
@@ -5,7 +6,7 @@ class BodegasController < ApplicationController
   end
 
   def consulta
-    @sku = params['sku']
+    @sku = params[:sku]
     stocks = Bodega.obtener_info_stock(@sku)
     info = Bodega.informacion
 

@@ -1,0 +1,124 @@
+ function tab1(){
+	$("#productos").fadeOut(0);
+	$("#pedidos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', 'active');
+	$("#tab2_productos").attr('class', '');
+}
+
+ function tab2(){
+	$("#pedidos").fadeOut(0);
+	$("#productos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', '');
+	$("#tab2_productos").attr('class', 'active');
+}
+
+$(function() {
+    new Highcharts.Chart({
+    	
+    	chart: {
+    	type: 'area',
+        renderTo: "ingresos_chart"
+		},
+		title: {
+		text: "Ingresos / Costos"
+		},
+		xAxis: {
+		type: "datetime"
+		},
+		yAxis: {
+		title: {
+		  text: "CLP $"
+		}
+		},
+		series: [
+			{
+				name: 'Ingresos',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.ingresos_on(date).to_f }.inspect%>
+			},
+			{
+				name: 'Costos',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.costos_on(date).to_f }.inspect%>
+			}
+		]
+
+    });
+
+    new Highcharts.Chart({
+    	
+    	chart: {
+    	type: 'column',
+        renderTo: "ingresos_chart2"
+		},
+		title: {
+		text: "Quiebres"
+		},
+		xAxis: {
+		type: "datetime"
+		},
+		yAxis: {
+		title: {
+		  text: "Cantidad"
+		}
+		},
+		series: [
+			{
+				name: 'Por Clima',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 5.days.ago.to_i * 1000%>,
+				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_clima_on(date).to_f }.inspect%>
+			},
+			{
+				name: 'Por Stock',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 5.days.ago.to_i * 1000%>,
+				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_stock_on(date).to_f }.inspect%>
+			}
+		]
+
+    });
+
+    new Highcharts.Chart({
+    	
+    	chart: {
+    	type: 'area',
+        renderTo: "quiebres_chart"
+		},
+		title: {
+		text: "Despachos / Quiebres"
+		},
+		xAxis: {
+		type: "datetime"
+		},
+		yAxis: {
+		title: {
+		  text: "Cantidad"
+		}
+		},
+		series: [
+			{
+				name: 'Despachos',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.despachos_on(date).to_f }.inspect%>
+			},
+			{
+				name: 'Quiebres',
+				pointInterval: <%= 1.day * 1000%>,
+				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
+				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_on(date).to_f }.inspect%>
+			}
+		]
+
+    });
+
+    tab1();
+    
+
+});
+

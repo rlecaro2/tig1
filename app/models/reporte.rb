@@ -33,4 +33,60 @@ class Reporte
     reporte.save
   end
 
+  def self.ingresos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.ingresos
+    end
+  end
+
+  def self.costos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.costos
+    end
+  end
+
+  def self.despachos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.despachos
+    end
+  end
+
+  def self.quiebres_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.quiebres
+    end
+  end
+
+  def self.quiebres_clima_on(date)
+    r = Reporte.where(fecha: date).first
+
+    if r.nil?
+      return 0
+    else
+      return r.mongo_pedidos.select {|a| a.status == "Quiebre por clima"}.count
+    end
+  end
+
+  def self.quiebres_stock_on(date)
+    r = Reporte.where(fecha: date).first
+
+    if r.nil?
+      return 0
+    else
+      return r.mongo_pedidos.select {|a| a.status == "Quiebre por falta de stock"}.count
+    end
+  end
+
 end

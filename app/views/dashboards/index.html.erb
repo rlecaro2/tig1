@@ -1,65 +1,24 @@
-<html>
-  <head>
-<% @despachos_quiebres.each do |tupla| %>
-<%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
-<%end%>
+<% content_for :scripts do %>
+  <%= javascript_include_tag "dashboards.js" %>
+<% end %>
 
-<% @ingresos_costos.each do |tupla| %>
-<%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
-<%end%>
-<%= @ingresos_costos %>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+<%= link_to 'Reportes Diarios', reportes_diarios_path %>
 
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
+<ul class="nav nav-tabs">
+  <li id="tab1_pedidos" class="active">
+    <a href="#" onClick="tab1(); return false">Pedidos</a>
+  </li>
+  <li id="tab2_productos" >
+    <a href="#" onClick="tab2(); return false">Quiebres</a>
+  </li>
+</ul>
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
+<div id="pedidos" class="charts">
+<div id="ingresos_chart" style="width:auto; height:300px;"></div>
+<div id="quiebres_chart" style="width:auto; height:300px;"></div>
+</div>
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Fecha', 'Ingresos', 'Costos'],
-          <% @ingresos_costos.each do |tupla| %>
-            <%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
-          <%end%>
-        ]);
-
-        var options = {
-          title: 'Ingresos y Costos',
-          hAxis: {title: 'Fecha',  titleTextStyle: {color: 'red'}}
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('ingresos_costos_div'));
-        chart.draw(data, options);
-
-
-        var data2 = google.visualization.arrayToDataTable([
-          ['Fecha', 'Despachos', 'Quiebres'],
-          <% @despachos_quiebres.each do |tupla| %>
-            <%= "[" + tupla[0] + "," + tupla[1] + "," + tupla[2] + "]," %>
-          <%end%>
-        ]);
-        
-        var options2 = {
-          title: 'Despachos y Quiebres',
-          hAxis: {title: 'Fecha',  titleTextStyle: {color: 'red'}}
-        };
-
-        var chart2 = new google.visualization.AreaChart(document.getElementById('despachos_quiebres_div'));
-        chart2.draw(data2, options2);
-
-      }
-    </script>
-  </head>
-
-  <body>
-    <!--Div that will hold the pie chart-->
-    <div id="ingresos_costos_div"></div>
-    <div id="despachos_quiebres_div"></div>
-  </body>
-</html>
+<div id="productos" class="charts">
+<div id="quiebres_chart2" style="width:auto; height:300px;"></div>
+<div id="ingresos_chart2" style="width:auto; height:300px;"></div>
+</div>
