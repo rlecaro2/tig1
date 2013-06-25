@@ -25,6 +25,15 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def reportes_diarios
+    @reportes = Reporte.order("date DESC").page(params[:page]).per(10)
+
+    respond_to do |format|
+      format.html
+    end
+
+  end
+
   def descargar_excel
     @reporte = Reporte.find(params[:id])
     respond_to do |format|

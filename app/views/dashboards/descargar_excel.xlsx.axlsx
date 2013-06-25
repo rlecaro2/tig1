@@ -1,11 +1,13 @@
 wb = xlsx_package.workbook
 style_shout = wb.styles.add_style sz: 12, b: true, alignment: { horizontal: :center }
-heading = ["Name", "Science", "Maths", "Computer Science", "English", "Regional Language"]
+heading = ["Fecha Pedido","SKU", "Rut", "Cantidad", "Unidad", "Estado", "Costos", "Ingresos", "Fecha Llegada", "Hora Llegada"]
 
 # Build the Excel
-wb.add_worksheet(name: "users_list") do |sheet|
+wb.add_worksheet(name: "Pedidos") do |sheet|
   sheet.add_row heading.flatten, :style => style_shout
 
-  sheet.add_row ["Sriram", "150", "149", "130", "125", "150"]
+  @reporte.mongo_pedidos.each do |pedido|
+  	sheet.add_row ["#{fecha}", "#{sku}", "#{rut}", "#{cantidad}", "#{unidad}", "#{status}", "#{costos}", "#{ingresos}", "#{fecha_llegada}", "#{hora_llegada}"]
+  end
 
 end

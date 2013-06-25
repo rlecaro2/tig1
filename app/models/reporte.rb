@@ -33,16 +33,40 @@ class Reporte
     reporte.save
   end
 
-  def reporte_a_excel
-    p = Axlsx::Package.new
-    wb = p.workbook
-
-    reportes = Reporte.all #CAMBIAR DESPUES!!!
-    wb.add_worksheet(:name => "Pedidos") do |sheet|
-      sheet.add_row ["Fecha Pedido","SKU", "Rut", "Cantidad", "Unidad", "Estado", "Costos", "Ingresos", "Fecha Llegada", "Hora Llegada"]
-
+  def self.ingresos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.ingresos
     end
-    p.serialize("example2.xlsx")
+  end
+
+  def self.costos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.costos
+    end
+  end
+
+  def self.despachos_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.despachos
+    end
+  end
+
+  def self.quiebres_on(date)
+    r = Reporte.where(fecha: date).first
+    if r.nil?
+      return 0
+    else
+      return r.quiebres
+    end
   end
 
 end

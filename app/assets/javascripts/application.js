@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree ./gmaps4rails
+//= require highcharts
+//= require highcharts/highcharts-more

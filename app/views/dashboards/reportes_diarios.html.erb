@@ -1,0 +1,33 @@
+<div class="page-header">
+	<h1>Reportes Diarios</h1>
+</div>
+
+
+<%= paginate @reportes %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:fecha) %></th>
+      <th><%= model_class.human_attribute_name(:quiebres) %></th>
+      <th><%= model_class.human_attribute_name(:despachos) %></th>
+      <th><%= model_class.human_attribute_name(:costos) %></th>
+      <th><%= model_class.human_attribute_name(:ingresos) %></th>
+      <th>Descargar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reportes.each do |reporte| %>
+      <tr>
+        <td><%= reporte.fecha.readable_inspect %></td>
+        <td><%= reporte.quiebres %></td>
+        <td><%= reporte.despachos %></td>
+        <td><%= reporte.costos %></td>
+        <td><%= reporte.ingresos %></td>
+        <td><%= link_to 'Excel', descargar_excel_path(reporte.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @reportes %>
