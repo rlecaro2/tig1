@@ -33,4 +33,16 @@ class Reporte
     reporte.save
   end
 
+  def reporte_a_excel
+    p = Axlsx::Package.new
+    wb = p.workbook
+
+    reportes = Reporte.all #CAMBIAR DESPUES!!!
+    wb.add_worksheet(:name => "Pedidos") do |sheet|
+      sheet.add_row ["Fecha Pedido","SKU", "Rut", "Cantidad", "Unidad", "Estado", "Costos", "Ingresos", "Fecha Llegada", "Hora Llegada"]
+
+    end
+    p.serialize("example2.xlsx")
+  end
+
 end

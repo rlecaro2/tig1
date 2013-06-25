@@ -13,6 +13,10 @@ gem "remail"
 
 gem 'gmaps4rails'
 
+gem 'axlsx'
+
+gem 'axlsx_rails'
+
 gem "httparty"
 
 gem 'google_drive'

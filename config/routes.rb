@@ -8,6 +8,8 @@ Integra1::Application.routes.draw do
   get 'whenever_logs' => "logs#whenever_logs"
   get 'bodega_logs' => "logs#bodega_logs"
 
+  match 'dashboard/reportes/:id/descargar_excel' => 'dashboards#descargar_excel', as: :reporte_excel, via: :get, :defaults => { :format => 'xlsx' }
+
   resources :bodegas do
     collection do
       get 'consulta'

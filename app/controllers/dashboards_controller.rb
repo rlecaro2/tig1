@@ -25,4 +25,13 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def descargar_excel
+    @reporte = Reporte.find(params[:id])
+    respond_to do |format|
+      format.xlsx {
+        render xlsx: "descargar_excel", disposition: "attachment", filename: "reporte.xlsx"
+      }
+    end
+  end
+
 end

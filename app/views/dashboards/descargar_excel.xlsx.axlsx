@@ -1,0 +1,11 @@
+wb = xlsx_package.workbook
+style_shout = wb.styles.add_style sz: 12, b: true, alignment: { horizontal: :center }
+heading = ["Name", "Science", "Maths", "Computer Science", "English", "Regional Language"]
+
+# Build the Excel
+wb.add_worksheet(name: "users_list") do |sheet|
+  sheet.add_row heading.flatten, :style => style_shout
+
+  sheet.add_row ["Sriram", "150", "149", "130", "125", "150"]
+
+end
