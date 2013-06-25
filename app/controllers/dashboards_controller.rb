@@ -26,7 +26,7 @@ class DashboardsController < ApplicationController
   end
 
   def reportes_diarios
-    @reportes = Reporte.desc(:fecha).page(params[:page]).per(10).all.to_a
+    @reportes = Reporte.desc(:fecha).page(params[:page]).per(50).all.to_a
 
     respond_to do |format|
       format.html
