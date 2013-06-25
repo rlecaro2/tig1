@@ -53,13 +53,13 @@ $(function() {
     	
     	chart: {
     	type: "bar",
-    	inverted: true,
         renderTo: "ingresos_chart2"
 		},
 		title: {
 		text: "Quiebres"
 		},
 		xAxis: {
+		reversed: false,
 		type: "datetime"
 		},
 		yAxis: {
@@ -71,8 +71,8 @@ $(function() {
 			{
 				name: 'Ingresos',
 				pointInterval: <%= 1.day * 1000%>,
-				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
-				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.ingresos_on(date).to_f }.inspect%>
+				pointStart: <%= 5.days.ago.to_i * 1000%>,
+				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.ingresos_on(date).to_f }.inspect%>
 			},
 			{
 				name: 'Costos',
