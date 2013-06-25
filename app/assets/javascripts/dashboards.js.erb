@@ -52,14 +52,13 @@ $(function() {
     new Highcharts.Chart({
     	
     	chart: {
-    	type: "bar",
+    	type: 'column',
         renderTo: "ingresos_chart2"
 		},
 		title: {
 		text: "Quiebres"
 		},
 		xAxis: {
-		reversed: false,
 		type: "datetime"
 		},
 		yAxis: {
@@ -69,16 +68,16 @@ $(function() {
 		},
 		series: [
 			{
-				name: 'Ingresos',
+				name: 'Por Clima',
 				pointInterval: <%= 1.day * 1000%>,
 				pointStart: <%= 5.days.ago.to_i * 1000%>,
-				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.ingresos_on(date).to_f }.inspect%>
+				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_clima_on(date).to_f }.inspect%>
 			},
 			{
-				name: 'Costos',
+				name: 'Por Stock',
 				pointInterval: <%= 1.day * 1000%>,
 				pointStart: <%= 5.days.ago.to_i * 1000%>,
-				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.costos_on(date).to_f }.inspect%>
+				data: <%= (5.days.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_stock_on(date).to_f }.inspect%>
 			}
 		]
 
