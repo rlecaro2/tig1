@@ -1,4 +1,20 @@
- $(function() {
+ function tab1(){
+	$("#productos").fadeOut(0);
+	$("#pedidos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', 'active');
+	$("#tab2_productos").attr('class', '');
+}
+
+ function tab2(){
+	$("#pedidos").fadeOut(0);
+	$("#productos").fadeIn(0);
+
+	$("#tab1_pedidos").attr('class', '');
+	$("#tab2_productos").attr('class', 'active');
+}
+
+$(function() {
     new Highcharts.Chart({
     	
     	chart: {
@@ -131,22 +147,8 @@
 
     });
 
+    tab1();
     
 
 });
 
-function tab1(){
-	$("#productos").fadeOut(0);
-	$("#pedidos").fadeIn(0);
-
-	$("#tab1_pedidos").attr('class', 'active');
-	$("#tab2_productos").attr('class', '');
-}
-
- function tab2(){
-	$("#pedidos").fadeOut(0);
-	$("#productos").fadeIn(0);
-
-	$("#tab1_pedidos").attr('class', '');
-	$("#tab2_productos").attr('class', 'active');
-}
