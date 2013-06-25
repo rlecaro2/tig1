@@ -6,8 +6,8 @@ heading = ["Fecha Pedido","SKU", "Rut", "Cantidad", "Unidad", "Estado", "Costos"
 wb.add_worksheet(name: "Pedidos") do |sheet|
   sheet.add_row heading.flatten, :style => style_shout
 
-  @reporte.mongo_pedidos.each do |pedido|
-  	sheet.add_row ["#{fecha}", "#{sku}", "#{rut}", "#{cantidad}", "#{unidad}", "#{status}", "#{costos}", "#{ingresos}", "#{fecha_llegada}", "#{hora_llegada}"]
+  @reporte.mongo_pedidos.each do |p|
+  	sheet.add_row ["#{p.fecha}", "#{p.sku}", "#{p.rut}", "#{p.cantidad}", "#{p.unidad}", "#{p.status}", "#{p.costos}", "#{p.ingresos}", "#{p.fecha_llegada}", "#{p.hora_llegada}"]
   end
 
 end
