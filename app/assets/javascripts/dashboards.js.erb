@@ -117,40 +117,6 @@ $(function() {
 
     });
 
-    new Highcharts.Chart({
-    	
-    	chart: {
-
-        renderTo: "quiebres_chart2"
-		},
-		title: {
-		text: "Despachos / Quiebres"
-		},
-		xAxis: {
-		type: "datetime"
-		},
-		yAxis: {
-		title: {
-		  text: "Cantidad"
-		}
-		},
-		series: [
-			{
-				name: 'Despachos',
-				pointInterval: <%= 1.day * 1000%>,
-				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
-				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.despachos_on(date).to_f }.inspect%>
-			},
-			{
-				name: 'Quiebres',
-				pointInterval: <%= 1.day * 1000%>,
-				pointStart: <%= 2.weeks.ago.to_i * 1000%>,
-				data: <%= (2.weeks.ago.to_date..Date.today.prev_day).map {|date| Reporte.quiebres_on(date).to_f }.inspect%>
-			}
-		]
-
-    });
-
     tab1();
     
 
